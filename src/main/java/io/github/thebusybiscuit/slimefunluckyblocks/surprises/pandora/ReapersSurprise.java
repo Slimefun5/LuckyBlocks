@@ -12,12 +12,19 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedAttribute;
 import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedPlayerHead;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class ReapersSurprise implements Surprise {
 
     private final ItemStack hoe;
@@ -30,13 +37,14 @@ public final class ReapersSurprise implements Surprise {
         hoe.addUnsafeEnchantment(Enchantment.UNBREAKING, 10);
     }
 
+    @Nonnull
     @Override
     public String getName() {
         return "Reapers";
     }
 
     @Override
-    public void activate(Random random, Player p, Location l) {
+    public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
         for (int i = 0; i < 4; i++) {
             Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
             zombie.getAttribute(VersionedAttribute.MAX_HEALTH).setBaseValue(120D);
@@ -55,6 +63,7 @@ public final class ReapersSurprise implements Surprise {
         }
     }
 
+    @Nonnull
     @Override
     public LuckLevel getLuckLevel() {
         return LuckLevel.PANDORA;

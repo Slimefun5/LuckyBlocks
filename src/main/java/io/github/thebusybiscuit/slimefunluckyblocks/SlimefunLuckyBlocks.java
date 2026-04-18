@@ -22,6 +22,9 @@ import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.potion.PotionEffect;
 
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -89,6 +92,12 @@ import io.github.thebusybiscuit.slimefunluckyblocks.surprises.unlucky.WitchSurpr
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.unlucky.ZombiePigmenSurprise;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
+/**
+ * The main plugin class for SlimefunLuckyBlocks.
+ * This addon adds Lucky Blocks to Slimefun.
+ *
+ * @author TheBusyBiscuit
+ */
 public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     private static final String TEXTURE = "b3b710b08b523bba7efba07c629ba0895ad61126d26c86beb3845603a97426c";
@@ -292,7 +301,8 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         }
     }
 
-    public static ItemStack createPotion(Color color, PotionEffect effect, boolean lucky) {
+    @Nonnull
+    public static ItemStack createPotion(@Nonnull Color color, @Nonnull PotionEffect effect, boolean lucky) {
         ItemStack potion = new ItemStack(lucky ? Material.POTION : Material.SPLASH_POTION);
         PotionMeta pm = (PotionMeta) potion.getItemMeta();
         pm.setDisplayName(ChatColors.color((lucky ? "&6Lucky" : "&cUnlucky") + " potion"));
@@ -302,7 +312,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         return potion;
     }
 
-    public void registerSurprise(Surprise surprise) {
+    public void registerSurprise(@Nonnull Surprise surprise) {
         if (surprise instanceof CustomItemSurprise) {
             if (cfg.getBoolean("custom." + surprise.getName() + ".enabled")) {
                 surprises.add(surprise);
@@ -322,7 +332,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         }
     }
 
-    public void spawnLuckyBlock(Block b) {
+    public void spawnLuckyBlock(@Nonnull Block b) {
         BlockData data = Material.PLAYER_HEAD.createBlockData(bd -> {
             if (bd instanceof Rotatable) {
                 Rotatable skull = (Rotatable) bd;
@@ -341,14 +351,21 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         }
     }
 
+    @Nonnull
     public Config getCfg() {
         return cfg;
     }
+
+    @Nonnull
+
 
     @Override
     public JavaPlugin getJavaPlugin() {
         return this;
     }
+
+    @Nonnull
+
 
     @Override
     public String getBugTrackerURL() {

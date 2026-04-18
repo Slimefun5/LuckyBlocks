@@ -9,18 +9,26 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Sheep;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class RainbowSheepSurprise implements Surprise {
 	
+	@Nonnull
 	@Override
 	public String getName() {
 		return "Mister Rainbow";
 	}
 
 	@Override
-	public void activate(Random random, Player p, Location l) {
+	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		String string = "Mr. Rainbow";
 		ChatColor[] colors = new ChatColor[] {ChatColor.AQUA, ChatColor.BLUE, ChatColor.DARK_AQUA, ChatColor.DARK_BLUE, ChatColor.DARK_GREEN, ChatColor.DARK_PURPLE, ChatColor.DARK_RED, ChatColor.GOLD, ChatColor.GREEN, ChatColor.LIGHT_PURPLE, ChatColor.RED, ChatColor.YELLOW};
 		StringBuilder name = new StringBuilder();
@@ -39,6 +47,7 @@ public final class RainbowSheepSurprise implements Surprise {
 		}
 	}
 
+	@Nonnull
 	@Override
 	public LuckLevel getLuckLevel() {
 		return LuckLevel.NEUTRAL;

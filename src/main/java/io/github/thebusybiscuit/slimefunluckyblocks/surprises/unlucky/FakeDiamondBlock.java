@@ -8,25 +8,34 @@ import org.bukkit.Material;
 import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Player;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class FakeDiamondBlock implements Surprise {
 	
+	@Nonnull
 	@Override
 	public String getName() {
 		return "Normal and Fake Diamond Block";
 	}
 
 	@Override
-	public void activate(Random random, Player p, Location l) {
+	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		l.getBlock().getRelative(BlockFace.UP).getRelative(BlockFace.UP).setType(Material.DIAMOND_BLOCK);
 		l.getBlock().getRelative(BlockFace.UP).setType(Material.DIAMOND_BLOCK);
 		p.sendTitle("", ChatColor.translateAlternateColorCodes('&', "&7&oOne is real, one is not..."), 10, 20, 10);
 		BlockStorage.store(random.nextInt(10) < 5 ? l.getBlock().getRelative(BlockFace.UP): l.getBlock(), "LUCKY_BLOCK_UNLUCKY");
 	}
 
+	@Nonnull
 	@Override
 	public LuckLevel getLuckLevel() {
 		return LuckLevel.UNLUCKY;

@@ -9,18 +9,26 @@ import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class FlyingCreeperSurprise implements Surprise {
 	
+	@Nonnull
 	@Override
 	public String getName() {
 		return "Flying Creepers";
 	}
 
 	@Override
-	public void activate(Random random, Player p, Location l) {
+	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		for (int i = 0; i < 4; i++) {
 			Bat bat = (Bat) l.getWorld().spawnEntity(l, EntityType.BAT);
 			bat.addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, 999999999, 255));
@@ -28,6 +36,7 @@ public final class FlyingCreeperSurprise implements Surprise {
 		}
 	}
 
+	@Nonnull
 	@Override
 	public LuckLevel getLuckLevel() {
 		return LuckLevel.UNLUCKY;

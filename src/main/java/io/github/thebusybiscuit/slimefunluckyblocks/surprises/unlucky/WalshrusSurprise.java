@@ -11,12 +11,19 @@ import org.bukkit.entity.Player;
 import org.bukkit.entity.Zombie;
 import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedAttribute;
 import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedPlayerHead;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class WalshrusSurprise implements Surprise {
 
     private final ItemStack sword;
@@ -29,13 +36,14 @@ public final class WalshrusSurprise implements Surprise {
         sword.addUnsafeEnchantment(Enchantment.FIRE_ASPECT, 5);
     }
 
+    @Nonnull
     @Override
     public String getName() {
         return "Walshrus";
     }
 
     @Override
-    public void activate(Random random, Player p, Location l) {
+    public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
         Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
         zombie.getAttribute(VersionedAttribute.MAX_HEALTH).setBaseValue(40D);
         zombie.setHealth(40D);
@@ -50,6 +58,7 @@ public final class WalshrusSurprise implements Surprise {
         zombie.setCustomNameVisible(true);
     }
 
+    @Nonnull
     @Override
     public LuckLevel getLuckLevel() {
         return LuckLevel.UNLUCKY;

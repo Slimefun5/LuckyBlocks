@@ -8,11 +8,19 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Slime;
 
+import javax.annotation.Nonnull;
+
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
+/**
+ * A {@link Surprise} implementation.
+ *
+ * @author TheBusyBiscuit
+ */
 public final class JerrySlimeSurprise implements Surprise {
 	
+	@Nonnull
 	@Override
 	public String getName() {
 		return "Jerry the Slime";
@@ -26,6 +34,7 @@ public final class JerrySlimeSurprise implements Surprise {
 		slime.setCustomNameVisible(true);
 	}
 
+	@Nonnull
 	@Override
 	public LuckLevel getLuckLevel() {
 		return LuckLevel.NEUTRAL;

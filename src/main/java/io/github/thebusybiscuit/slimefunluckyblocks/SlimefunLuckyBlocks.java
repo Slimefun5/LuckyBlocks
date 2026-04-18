@@ -11,6 +11,7 @@ import org.bstats.bukkit.Metrics;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.Registry;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
@@ -266,7 +267,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
                                 for (String ench : cfg.getStringList(itemPath + ".enchants")) {
                                     String[] split = ench.split(":");
                                     String enchName = split[0];
-                                    Enchantment enchantment = Enchantment.getByName(enchName.toUpperCase(Locale.ROOT));
+                                    Enchantment enchantment = Registry.ENCHANTMENT.get(NamespacedKey.minecraft(enchName.toLowerCase(Locale.ROOT)));
                                     int level = 1;
 
                                     if (enchantment != null) {

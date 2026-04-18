@@ -13,30 +13,30 @@ import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
 public final class LuckyAxeSurprise implements Surprise {
-	
-	private final ItemStack axe;
-	
-	public LuckyAxeSurprise() {
-		axe = new CustomItemStack(Material.GOLDEN_AXE, "&e&lLucky Axe");
-		axe.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
-		axe.addUnsafeEnchantment(Enchantment.DIG_SPEED, 10);
-		axe.addUnsafeEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 10);
-		axe.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-	}
-	
-	@Override
-	public String getName() {
-		return "Lucky Axe";
-	}
 
-	@Override
-	public void activate(Random random, Player p, Location l) {
-		l.getWorld().dropItemNaturally(l, axe.clone());
-	}
+    private final ItemStack axe;
 
-	@Override
-	public LuckLevel getLuckLevel() {
-		return LuckLevel.LUCKY;
-	}
+    public LuckyAxeSurprise() {
+        axe = CustomItemStack.create(Material.GOLDEN_AXE, "&e&lLucky Axe");
+        axe.addUnsafeEnchantment(Enchantment.SHARPNESS, 10);
+        axe.addUnsafeEnchantment(Enchantment.EFFICIENCY, 10);
+        axe.addUnsafeEnchantment(Enchantment.FORTUNE, 10);
+        axe.addUnsafeEnchantment(Enchantment.UNBREAKING, 10);
+    }
+
+    @Override
+    public String getName() {
+        return "Lucky Axe";
+    }
+
+    @Override
+    public void activate(Random random, Player p, Location l) {
+        l.getWorld().dropItemNaturally(l, axe.clone());
+    }
+
+    @Override
+    public LuckLevel getLuckLevel() {
+        return LuckLevel.LUCKY;
+    }
 
 }

@@ -11,20 +11,20 @@ import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 
 public final class PotatOSSurprise implements Surprise {
-	
-	@Override
-	public String getName() {
-		return "PotatOS";
-	}
 
-	@Override
-	public void activate(Random random, Player p, Location l) {
-		l.getWorld().dropItemNaturally(l, new CustomItemStack(Material.POTATO, "&e&lPotatOS"));
-	}
+    @Override
+    public String getName() {
+        return "PotatOS";
+    }
 
-	@Override
-	public LuckLevel getLuckLevel() {
-		return LuckLevel.NEUTRAL;
-	}
+    @Override
+    public void activate(Random random, Player p, Location l) {
+        l.getWorld().dropItemNaturally(l, CustomItemStack.create(Material.POTATO, "&e&lPotatOS"));
+    }
+
+    @Override
+    public LuckLevel getLuckLevel() {
+        return LuckLevel.NEUTRAL;
+    }
 
 }

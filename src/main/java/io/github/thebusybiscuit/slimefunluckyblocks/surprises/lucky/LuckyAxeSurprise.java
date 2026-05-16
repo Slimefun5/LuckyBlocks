@@ -12,7 +12,7 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 
 /**
  * A {@link Surprise} implementation.
@@ -49,3 +49,4 @@ public final class LuckyAxeSurprise implements Surprise {
     }
 
 }
+

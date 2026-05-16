@@ -9,7 +9,7 @@ import org.bukkit.util.Vector;
 
 import javax.annotation.Nonnull;
 
-import io.github.thebusybiscuit.slimefun4.utils.FireworkUtils;
+import io.github.thebusybiscuit.slimefun5.utils.FireworkUtils;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -48,3 +48,4 @@ public final class XPRainSurprise implements Surprise {
     }
 
 }
+

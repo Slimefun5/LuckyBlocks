@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
 
-import io.github.thebusybiscuit.slimefun4.utils.ColoredMaterial;
+import io.github.thebusybiscuit.slimefun5.utils.ColoredMaterial;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -41,3 +41,4 @@ public final class DiamondBlockPillarSurprise implements Surprise {
     }
 
 }
+

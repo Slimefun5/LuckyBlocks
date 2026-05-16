@@ -15,8 +15,8 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.compatibility.VersionedAttribute;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedAttribute;
 
 /**
  * A {@link Surprise} implementation.
@@ -60,3 +60,4 @@ public final class BryanZombieSurprise implements Surprise {
     }
 
 }
+

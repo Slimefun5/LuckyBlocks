@@ -12,10 +12,6 @@ A Slimefun addon that adds Lucky Blocks with randomized rewards and events.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
-# SlimefunLuckyBlocks
-
-SlimefunLuckyBlocks is a [Slimefun5](https://github.com/Slimefun5/Slimefun5) addon that adds Lucky Blocks to your server.
-
 ## :floppy_disk: Installation
 
 ## :beetle: Bug Reports

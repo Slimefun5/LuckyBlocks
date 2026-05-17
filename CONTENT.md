@@ -1,8 +1,6 @@
-## :floppy_disk: Installation
-
 ## :beetle: Bug Reports
 
-Report bugs at [GitHub Issues](https://github.com/TheBusyBiscuit/luckyblocks-sf/issues).
+Report bugs at [GitHub Issues](https://github.com/Slimefun5/LuckyBlocks/issues).
 
 ## :open_book: Contributing
 

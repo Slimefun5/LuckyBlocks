@@ -12,11 +12,9 @@ A Slimefun addon that adds Lucky Blocks with randomized rewards and events.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
-## :floppy_disk: Installation
-
 ## :beetle: Bug Reports
 
-Report bugs at [GitHub Issues](https://github.com/TheBusyBiscuit/luckyblocks-sf/issues).
+Report bugs at [GitHub Issues](https://github.com/Slimefun5/LuckyBlocks/issues).
 
 ## :open_book: Contributing
 

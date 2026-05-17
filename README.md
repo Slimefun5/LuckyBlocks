@@ -24,7 +24,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.1")
+    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.4")
 }
 ```
 

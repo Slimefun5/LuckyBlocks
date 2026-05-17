@@ -5,7 +5,7 @@
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/LuckyBlocks?style=social)](https://github.com/Slimefun5/LuckyBlocks)
 
-A Slimefun 5 Addon.
+A Slimefun addon that adds Lucky Blocks with randomized rewards and events.
 
 ## Requirements
 - Java 25

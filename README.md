@@ -12,6 +12,20 @@ A Slimefun addon that adds Lucky Blocks with randomized rewards and events.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
+# SlimefunLuckyBlocks
+
+SlimefunLuckyBlocks is a [Slimefun5](https://github.com/Slimefun5/Slimefun5) addon that adds Lucky Blocks to your server.
+
+## :floppy_disk: Installation
+
+## :beetle: Bug Reports
+
+Report bugs at [GitHub Issues](https://github.com/TheBusyBiscuit/luckyblocks-sf/issues).
+
+## :open_book: Contributing
+
+Please follow the [Slimefun5 Contributing Guidelines](https://github.com/Slimefun5/Slimefun5/blob/master/CONTRIBUTING.md).
+
 ## Developer API
 
 You can easily depend on this project using [github-gradle](https://github.com/intisy/github-gradle).
@@ -24,26 +38,6 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.4")
+    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.1")
 }
 ```
-
-# SlimefunLuckyBlocks
-
-SlimefunLuckyBlocks is a [Slimefun5](https://github.com/Slimefun5/Slimefun5) addon that adds Lucky Blocks to your server.
-
-## :floppy_disk: Installation
-
-| SlimefunLuckyBlocks | Slimefun5 | Minecraft |
-|---------------------|-----------|-----------|
-| UNOFFICIAL          | 5.0.0+    | 1.21.x    |
-
-Place the JAR in your `plugins/` folder. Slimefun5 must be installed first.
-
-## :beetle: Bug Reports
-
-Report bugs at [GitHub Issues](https://github.com/TheBusyBiscuit/luckyblocks-sf/issues).
-
-## :open_book: Contributing
-
-Please follow the [Slimefun5 Contributing Guidelines](https://github.com/Slimefun5/Slimefun5/blob/master/CONTRIBUTING.md).

@@ -7,7 +7,6 @@ import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -21,6 +20,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import dev.walshy.sfmetrics.MetricsModule;
 import org.bukkit.potion.PotionEffect;
 
 import javax.annotation.Nonnull;
@@ -109,11 +109,12 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
+        MetricsModule.setup(this, 31438);
+
         cfg = new Config(this);
 
         // Setting up bStats
-        new Metrics(this, 4858);
-
+        
         ItemGroup itemGroup = new ItemGroup(new NamespacedKey(this, "lucky_blocks"), CustomItemStack.create(VersionedPlayerHead.getItemStack(VersionedPlayerHead.hashToBase64(TEXTURE)), "&rLucky Blocks"));
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE, "&fLucky Block", "&7Luck: &f0");

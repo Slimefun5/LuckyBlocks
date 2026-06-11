@@ -25,10 +25,10 @@ public final class LuckyAxeSurprise implements Surprise {
 
     public LuckyAxeSurprise() {
         axe = CustomItemStack.create(Material.GOLDEN_AXE, "&e&lLucky Axe");
-        axe.addUnsafeEnchantment(Enchantment.SHARPNESS, 10);
-        axe.addUnsafeEnchantment(Enchantment.EFFICIENCY, 10);
-        axe.addUnsafeEnchantment(Enchantment.FORTUNE, 10);
-        axe.addUnsafeEnchantment(Enchantment.UNBREAKING, 10);
+        axe.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
+        axe.addUnsafeEnchantment(Enchantment.DIG_SPEED, 10);
+        axe.addUnsafeEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 10);
+        axe.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
     }
 
     @Nonnull

@@ -10,7 +10,6 @@ import java.util.logging.Level;
 import org.bukkit.Color;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.Registry;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
 import org.bukkit.block.data.BlockData;
@@ -20,7 +19,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import dev.walshy.sfmetrics.MetricsModule;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.potion.PotionEffect;
 
 import javax.annotation.Nonnull;
@@ -35,7 +34,6 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.common.CommonPatterns;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedPlayerHead;
 import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.CustomItemSurprise;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
@@ -109,13 +107,13 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-        MetricsModule.setup(this, 31438);
+        new Metrics(this, 31438);
 
         cfg = new Config(this);
 
         // Setting up bStats
         
-        ItemGroup itemGroup = new ItemGroup(new NamespacedKey(this, "lucky_blocks"), CustomItemStack.create(VersionedPlayerHead.getItemStack(VersionedPlayerHead.hashToBase64(TEXTURE)), "&rLucky Blocks"));
+        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), CustomItemStack.create(new ItemStack(Material.PLAYER_HEAD), "&rLucky Blocks"));
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE, "&fLucky Block", "&7Luck: &f0");
         SlimefunItemStack veryLuckyBlock = new SlimefunItemStack("LUCKY_BLOCK_LUCKY", TEXTURE, "&fVery lucky Block", "&7Luck: &a+80");
@@ -268,7 +266,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
                                 for (String ench : cfg.getStringList(itemPath + ".enchants")) {
                                     String[] split = ench.split(":");
                                     String enchName = split[0];
-                                    Enchantment enchantment = Registry.ENCHANTMENT.get(NamespacedKey.minecraft(enchName.toLowerCase(Locale.ROOT)));
+                                    Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(enchName.toLowerCase(Locale.ROOT)));
                                     int level = 1;
 
                                     if (enchantment != null) {
@@ -345,7 +343,6 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         });
 
         b.setBlockData(data);
-        VersionedPlayerHead.setSkin(b, VersionedPlayerHead.hashToBase64(TEXTURE), true);
         BlockStorage.store(b, "LUCKY_BLOCK");
 
         if (getCfg().getBoolean("debug")) {

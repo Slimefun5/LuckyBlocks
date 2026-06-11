@@ -16,7 +16,7 @@ import javax.annotation.Nonnull;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedAttribute;
+import org.bukkit.attribute.Attribute;
 
 /**
  * A {@link Surprise} implementation.
@@ -29,10 +29,10 @@ public final class BryanZombieSurprise implements Surprise {
 
     public BryanZombieSurprise() {
         axe = CustomItemStack.create(Material.GOLDEN_AXE, "&e&lLucky Axe");
-        axe.addUnsafeEnchantment(Enchantment.SHARPNESS, 10);
-        axe.addUnsafeEnchantment(Enchantment.EFFICIENCY, 10);
-        axe.addUnsafeEnchantment(Enchantment.FORTUNE, 10);
-        axe.addUnsafeEnchantment(Enchantment.UNBREAKING, 10);
+        axe.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
+        axe.addUnsafeEnchantment(Enchantment.DIG_SPEED, 10);
+        axe.addUnsafeEnchantment(Enchantment.LOOT_BONUS_BLOCKS, 10);
+        axe.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
     }
 
     @Nonnull
@@ -44,7 +44,7 @@ public final class BryanZombieSurprise implements Surprise {
     @Override
     public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
         Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
-        zombie.getAttribute(VersionedAttribute.MAX_HEALTH).setBaseValue(60D);
+        zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(60D);
         zombie.setHealth(60D);
         zombie.getEquipment().setItemInMainHand(axe.clone());
         zombie.getEquipment().setItemInMainHandDropChance(0F);

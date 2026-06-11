@@ -1,10 +1,10 @@
 package io.github.thebusybiscuit.slimefunluckyblocks.surprises.lucky;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 import org.bukkit.Location;
-import org.bukkit.Registry;
 import org.bukkit.entity.Cat;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -30,7 +30,7 @@ public final class TamedCatsSurprise implements Surprise {
 	@SuppressWarnings("deprecation")
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
-		List<Cat.Type> catTypes = Registry.CAT_VARIANT.stream().toList();
+		List<Cat.Type> catTypes = Arrays.asList(Cat.Type.values());
 		for (int i = 0; i < 8; i++) {
 			Cat cat = (Cat) l.getWorld().spawnEntity(l.add(random.nextInt(4) - (double) random.nextInt(8), 1, random.nextInt(4) - (double) random.nextInt(8)), EntityType.CAT);
 			cat.setAdult();

@@ -16,8 +16,7 @@ import javax.annotation.Nonnull;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedAttribute;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.VersionedPlayerHead;
+import org.bukkit.attribute.Attribute;
 
 /**
  * A {@link Surprise} implementation.
@@ -30,9 +29,9 @@ public final class WalshrusSurprise implements Surprise {
 
     public WalshrusSurprise() {
         sword = CustomItemStack.create(Material.GOLDEN_SWORD, "&e&lLucky Sword");
-        sword.addUnsafeEnchantment(Enchantment.SHARPNESS, 10);
-        sword.addUnsafeEnchantment(Enchantment.LOOTING, 10);
-        sword.addUnsafeEnchantment(Enchantment.UNBREAKING, 10);
+        sword.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
+        sword.addUnsafeEnchantment(Enchantment.LOOT_BONUS_MOBS, 10);
+        sword.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
         sword.addUnsafeEnchantment(Enchantment.FIRE_ASPECT, 5);
     }
 
@@ -45,10 +44,10 @@ public final class WalshrusSurprise implements Surprise {
     @Override
     public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
         Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
-        zombie.getAttribute(VersionedAttribute.MAX_HEALTH).setBaseValue(40D);
+        zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(40D);
         zombie.setHealth(40D);
 
-        zombie.getEquipment().setHelmet(VersionedPlayerHead.getItemStack("eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk2NmYwZWJkNzdmMWJjZDY1NmZhMmRjM2VmMDMwM2UyNmE2YTNkZTQ5OGMzOTk5ZDM5ZmRjYWNjNWY1YWQifX19"));
+        zombie.getEquipment().setHelmet(new ItemStack(Material.PLAYER_HEAD));
         zombie.getEquipment().setHelmetDropChance(0F);
 
         zombie.getEquipment().setItemInMainHand(sword.clone());

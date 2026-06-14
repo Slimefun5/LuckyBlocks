@@ -4,16 +4,12 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
-import java.util.concurrent.ThreadLocalRandom;
 import java.util.logging.Level;
 
 import org.bukkit.Color;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.block.data.BlockData;
-import org.bukkit.block.data.Rotatable;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -34,6 +30,7 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.common.CommonPatterns;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.CustomItemSurprise;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
@@ -113,7 +110,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
         // Setting up bStats
         
-        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), CustomItemStack.create(new ItemStack(Material.PLAYER_HEAD), "&rLucky Blocks"));
+        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), CustomItemStack.create(LuckyBlockCompat.safe(XMaterial.PLAYER_HEAD), "&rLucky Blocks"));
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE, "&fLucky Block", "&7Luck: &f0");
         SlimefunItemStack veryLuckyBlock = new SlimefunItemStack("LUCKY_BLOCK_LUCKY", TEXTURE, "&fVery lucky Block", "&7Luck: &a+80");
@@ -122,16 +119,16 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
         // @formatter:off
         new LuckyBlock(itemGroup, luckyBlock, RecipeType.ENHANCED_CRAFTING_TABLE,
-        new ItemStack[] { SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), new ItemStack(Material.DISPENSER), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item() }).register(this, surprises, s -> s.getLuckLevel() != LuckLevel.PANDORA);
+        new ItemStack[] { SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), new ItemStack(LuckyBlockCompat.safe(XMaterial.DISPENSER)), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item(), SlimefunItems.GOLD_12K.item() }).register(this, surprises, s -> s.getLuckLevel() != LuckLevel.PANDORA);
 
         new LuckyBlock(itemGroup, veryLuckyBlock, RecipeType.ENHANCED_CRAFTING_TABLE,
         new ItemStack[] { null, SlimefunItems.GOLD_12K.item(), null, SlimefunItems.GOLD_12K.item(), luckyBlock.item(), SlimefunItems.GOLD_12K.item(), null, SlimefunItems.GOLD_12K.item(), null }).register(this, surprises, s -> s.getLuckLevel() == LuckLevel.LUCKY);
 
         new LuckyBlock(itemGroup, veryUnluckyBlock, RecipeType.ENHANCED_CRAFTING_TABLE,
-        new ItemStack[] { null, new ItemStack(Material.SPIDER_EYE), null, new ItemStack(Material.SPIDER_EYE), luckyBlock.item(), new ItemStack(Material.SPIDER_EYE), null, new ItemStack(Material.SPIDER_EYE), null }).register(this, surprises, s -> s.getLuckLevel() == LuckLevel.UNLUCKY);
+        new ItemStack[] { null, new ItemStack(LuckyBlockCompat.safe(XMaterial.SPIDER_EYE)), null, new ItemStack(LuckyBlockCompat.safe(XMaterial.SPIDER_EYE)), luckyBlock.item(), new ItemStack(LuckyBlockCompat.safe(XMaterial.SPIDER_EYE)), null, new ItemStack(LuckyBlockCompat.safe(XMaterial.SPIDER_EYE)), null }).register(this, surprises, s -> s.getLuckLevel() == LuckLevel.UNLUCKY);
 
         new LuckyBlock(itemGroup, pandorasBox, RecipeType.ENHANCED_CRAFTING_TABLE,
-        new ItemStack[] { new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.LAPIS_BLOCK), new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.LAPIS_BLOCK), luckyBlock.item(), new ItemStack(Material.LAPIS_BLOCK), new ItemStack(Material.OAK_PLANKS), new ItemStack(Material.LAPIS_BLOCK), new ItemStack(Material.OAK_PLANKS) }).register(this, surprises, s -> s.getLuckLevel() == LuckLevel.PANDORA);
+        new ItemStack[] { new ItemStack(LuckyBlockCompat.safe(XMaterial.OAK_PLANKS)), new ItemStack(LuckyBlockCompat.safe(XMaterial.LAPIS_BLOCK)), new ItemStack(LuckyBlockCompat.safe(XMaterial.OAK_PLANKS)), new ItemStack(LuckyBlockCompat.safe(XMaterial.LAPIS_BLOCK)), luckyBlock.item(), new ItemStack(LuckyBlockCompat.safe(XMaterial.LAPIS_BLOCK)), new ItemStack(LuckyBlockCompat.safe(XMaterial.OAK_PLANKS)), new ItemStack(LuckyBlockCompat.safe(XMaterial.LAPIS_BLOCK)), new ItemStack(LuckyBlockCompat.safe(XMaterial.OAK_PLANKS)) }).register(this, surprises, s -> s.getLuckLevel() == LuckLevel.PANDORA);
         // @formatter:on
 
         new WorldGenerator(this);
@@ -266,7 +263,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
                                 for (String ench : cfg.getStringList(itemPath + ".enchants")) {
                                     String[] split = ench.split(":");
                                     String enchName = split[0];
-                                    Enchantment enchantment = Enchantment.getByKey(NamespacedKey.minecraft(enchName.toLowerCase(Locale.ROOT)));
+                                    Enchantment enchantment = LuckyBlockCompat.getEnchantment(enchName.toLowerCase(Locale.ROOT));
                                     int level = 1;
 
                                     if (enchantment != null) {
@@ -303,7 +300,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     @Nonnull
     public static ItemStack createPotion(@Nonnull Color color, @Nonnull PotionEffect effect, boolean lucky) {
-        ItemStack potion = new ItemStack(lucky ? Material.POTION : Material.SPLASH_POTION);
+        ItemStack potion = new ItemStack(LuckyBlockCompat.safe(lucky ? XMaterial.POTION : XMaterial.SPLASH_POTION));
         PotionMeta pm = (PotionMeta) potion.getItemMeta();
         pm.setDisplayName(ChatColors.color((lucky ? "&6Lucky" : "&cUnlucky") + " potion"));
         pm.setColor(color);
@@ -333,16 +330,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
     }
 
     public void spawnLuckyBlock(@Nonnull Block b) {
-        BlockData data = Material.PLAYER_HEAD.createBlockData(bd -> {
-            if (bd instanceof Rotatable) {
-                Rotatable skull = (Rotatable) bd;
-
-                BlockFace rotation = blockfaces[ThreadLocalRandom.current().nextInt(blockfaces.length)];
-                skull.setRotation(rotation);
-            }
-        });
-
-        b.setBlockData(data);
+        LuckyBlockCompat.placeRotatableHead(b, blockfaces);
         BlockStorage.store(b, "LUCKY_BLOCK");
 
         if (getCfg().getBoolean("debug")) {

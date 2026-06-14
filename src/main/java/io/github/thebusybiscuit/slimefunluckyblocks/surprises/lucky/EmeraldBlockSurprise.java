@@ -3,11 +3,12 @@ package io.github.thebusybiscuit.slimefunluckyblocks.surprises.lucky;
 import java.util.Random;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -26,7 +27,7 @@ public final class EmeraldBlockSurprise implements Surprise {
 
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
-		l.getWorld().spawnFallingBlock(l.add(0.5, 5, 0.5), Material.EMERALD_BLOCK.createBlockData());
+		LuckyBlockCompat.spawnFallingBlock(l.getWorld(), l.add(0.5, 5, 0.5), LuckyBlockCompat.safe(XMaterial.EMERALD_BLOCK));
 	}
 
 	@Nonnull

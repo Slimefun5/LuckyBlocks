@@ -3,16 +3,17 @@ package io.github.thebusybiscuit.slimefunluckyblocks.surprises.lucky;
 import java.util.Random;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 
 /**
  * A {@link Surprise} implementation.
@@ -24,7 +25,7 @@ public final class LuckySwordSurprise implements Surprise {
     private final ItemStack sword;
 
     public LuckySwordSurprise() {
-        sword = CustomItemStack.create(Material.GOLDEN_SWORD, "&e&lLucky Sword");
+        sword = CustomItemStack.create(LuckyBlockCompat.safe(XMaterial.GOLDEN_SWORD), "&e&lLucky Sword");
         sword.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
         sword.addUnsafeEnchantment(Enchantment.LOOT_BONUS_MOBS, 10);
         sword.addUnsafeEnchantment(Enchantment.DURABILITY, 10);

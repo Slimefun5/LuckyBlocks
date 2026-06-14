@@ -3,13 +3,14 @@ package io.github.thebusybiscuit.slimefunluckyblocks.surprises.neutral;
 import java.util.Random;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefun5.utils.FireworkUtils;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -29,10 +30,10 @@ public final class FishSurprise implements Surprise {
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 	    FireworkUtils.launchRandom(p, 3);
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.COD));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.SALMON));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.PUFFERFISH));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.TROPICAL_FISH));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.COD)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.SALMON)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.PUFFERFISH)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.TROPICAL_FISH)));
 	}
 
 	@Nonnull

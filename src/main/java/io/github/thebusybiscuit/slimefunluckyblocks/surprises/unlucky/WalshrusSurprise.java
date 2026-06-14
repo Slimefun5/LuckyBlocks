@@ -4,7 +4,6 @@ import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -13,10 +12,11 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
-import org.bukkit.attribute.Attribute;
 
 /**
  * A {@link Surprise} implementation.
@@ -28,7 +28,7 @@ public final class WalshrusSurprise implements Surprise {
     private final ItemStack sword;
 
     public WalshrusSurprise() {
-        sword = CustomItemStack.create(Material.GOLDEN_SWORD, "&e&lLucky Sword");
+        sword = CustomItemStack.create(LuckyBlockCompat.safe(XMaterial.GOLDEN_SWORD), "&e&lLucky Sword");
         sword.addUnsafeEnchantment(Enchantment.DAMAGE_ALL, 10);
         sword.addUnsafeEnchantment(Enchantment.LOOT_BONUS_MOBS, 10);
         sword.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
@@ -44,14 +44,12 @@ public final class WalshrusSurprise implements Surprise {
     @Override
     public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
         Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
-        zombie.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(40D);
-        zombie.setHealth(40D);
+        LuckyBlockCompat.setMaxHealth(zombie, 40D);
 
-        zombie.getEquipment().setHelmet(new ItemStack(Material.PLAYER_HEAD));
+        zombie.getEquipment().setHelmet(new ItemStack(LuckyBlockCompat.safe(XMaterial.PLAYER_HEAD)));
         zombie.getEquipment().setHelmetDropChance(0F);
 
-        zombie.getEquipment().setItemInMainHand(sword.clone());
-        zombie.getEquipment().setItemInMainHandDropChance(0F);
+        LuckyBlockCompat.setMainHandItem(zombie.getEquipment(), sword.clone());
         zombie.setCanPickupItems(false);
         zombie.setCustomName(ChatColor.translateAlternateColorCodes('&', "&4Walshrus"));
         zombie.setCustomNameVisible(true);

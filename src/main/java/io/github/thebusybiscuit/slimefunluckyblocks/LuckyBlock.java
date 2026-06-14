@@ -11,10 +11,11 @@ import java.util.stream.Collectors;
 import javax.annotation.Nonnull;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
+
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
@@ -68,7 +69,7 @@ public class LuckyBlock extends SlimefunItem {
     @Override
     public Collection<ItemStack> getDrops() {
         // Disable any drops from Lucky blocks (Air is not dropped but still counts as "overridden drops")
-        return Arrays.asList(new ItemStack(Material.AIR));
+        return Arrays.asList(new ItemStack(LuckyBlockCompat.safe(XMaterial.AIR)));
     }
 
     /**

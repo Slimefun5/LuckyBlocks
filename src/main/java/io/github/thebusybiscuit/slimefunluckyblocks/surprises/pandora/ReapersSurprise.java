@@ -48,7 +48,7 @@ public final class ReapersSurprise implements Surprise {
             Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
             LuckyBlockCompat.setMaxHealth(zombie, 120D);
 
-            zombie.getEquipment().setHelmet(new ItemStack(LuckyBlockCompat.safe(XMaterial.PLAYER_HEAD)));
+            zombie.getEquipment().setHelmet(LuckyBlockCompat.stack(XMaterial.PLAYER_HEAD));
             zombie.getEquipment().setHelmetDropChance(0F);
 
             LuckyBlockCompat.setMainHandItem(zombie.getEquipment(), hoe.clone());

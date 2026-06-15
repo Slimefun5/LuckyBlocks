@@ -46,7 +46,7 @@ public final class WalshrusSurprise implements Surprise {
         Zombie zombie = (Zombie) l.getWorld().spawnEntity(l, EntityType.ZOMBIE);
         LuckyBlockCompat.setMaxHealth(zombie, 40D);
 
-        zombie.getEquipment().setHelmet(new ItemStack(LuckyBlockCompat.safe(XMaterial.PLAYER_HEAD)));
+        zombie.getEquipment().setHelmet(LuckyBlockCompat.stack(XMaterial.PLAYER_HEAD));
         zombie.getEquipment().setHelmetDropChance(0F);
 
         LuckyBlockCompat.setMainHandItem(zombie.getEquipment(), sword.clone());

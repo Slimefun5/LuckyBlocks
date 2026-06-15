@@ -110,7 +110,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
         // Setting up bStats
         
-        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), CustomItemStack.create(LuckyBlockCompat.safe(XMaterial.PLAYER_HEAD), "&rLucky Blocks"));
+        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), CustomItemStack.create(LuckyBlockCompat.stack(XMaterial.PLAYER_HEAD), "&rLucky Blocks"));
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE, "&fLucky Block", "&7Luck: &f0");
         SlimefunItemStack veryLuckyBlock = new SlimefunItemStack("LUCKY_BLOCK_LUCKY", TEXTURE, "&fVery lucky Block", "&7Luck: &a+80");

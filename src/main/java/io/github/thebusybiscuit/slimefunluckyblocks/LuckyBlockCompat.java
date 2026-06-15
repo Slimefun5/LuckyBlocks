@@ -48,6 +48,16 @@ public final class LuckyBlockCompat {
     }
 
     /**
+     * Resolves an {@link XMaterial} to an {@link ItemStack}, preserving the legacy data value
+     * (e.g. SKULL_ITEM:3 = player head) that {@link #safe(XMaterial)} drops on 1.8-1.12.
+     */
+    @javax.annotation.Nonnull
+    public static org.bukkit.inventory.ItemStack stack(@javax.annotation.Nonnull XMaterial material) {
+        org.bukkit.inventory.ItemStack item = material.parseItem();
+        return item != null ? item : new org.bukkit.inventory.ItemStack(safe(material));
+    }
+
+    /**
      * Spawns a falling block of the given {@link Material}. Uses {@code BlockData}
      * on 1.13+ and the legacy {@code spawnFallingBlock(Location, Material, byte)}
      * signature on older versions.

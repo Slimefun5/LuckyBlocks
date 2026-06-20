@@ -68,7 +68,7 @@ tasks {
 
     shadowJar {
         relocate("org.bstats", "luckyblocks.libs.bstats")
-        archiveFileName.set("SlimefunLuckyBlocks v${project.version}.jar")
+        archiveFileName.set("SlimefunLuckyBlocks-1.0.0-UNOFFICIAL.jar")
                 exclude("META-INF/**")
     }
 

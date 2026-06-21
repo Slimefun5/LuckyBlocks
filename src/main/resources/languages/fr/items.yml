@@ -1,0 +1,19 @@
+# Traductions françaises des objets de SlimefunLuckyBlocks
+_LUCKYBLOCKS_GROUP_ICON:
+  name: "&rBlocs Chanceux"
+LUCKY_BLOCK:
+  name: "&fBloc Chanceux"
+  lore:
+    - "&7Chance : &f0"
+LUCKY_BLOCK_LUCKY:
+  name: "&fBloc très chanceux"
+  lore:
+    - "&7Chance : &a+80"
+LUCKY_BLOCK_UNLUCKY:
+  name: "&fBloc très malchanceux"
+  lore:
+    - "&7Chance : &c-80"
+PANDORAS_BOX:
+  name: "&5Boîte de Pandore"
+  lore:
+    - "&7Chance : &c&oERREUR"

@@ -1,0 +1,19 @@
+# Traducciones al español de los objetos de SlimefunLuckyBlocks
+_LUCKYBLOCKS_GROUP_ICON:
+  name: "&rBloques de la Suerte"
+LUCKY_BLOCK:
+  name: "&fBloque de la Suerte"
+  lore:
+    - "&7Suerte: &f0"
+LUCKY_BLOCK_LUCKY:
+  name: "&fBloque muy afortunado"
+  lore:
+    - "&7Suerte: &a+80"
+LUCKY_BLOCK_UNLUCKY:
+  name: "&fBloque muy desafortunado"
+  lore:
+    - "&7Suerte: &c-80"
+PANDORAS_BOX:
+  name: "&5Caja de Pandora"
+  lore:
+    - "&7Suerte: &c&oERROR"

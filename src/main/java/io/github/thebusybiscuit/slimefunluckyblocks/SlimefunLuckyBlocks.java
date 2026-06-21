@@ -31,6 +31,7 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.common.CommonPatterns;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.CustomItemSurprise;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
@@ -137,6 +138,8 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         registerCustomSurprises();
 
         getLogger().log(Level.INFO, "Loaded {0} different Surprises!", surprises.size());
+
+        Slimefun.getItemTranslationService().registerTranslations(this);
     }
 
     private void registerDefaultSurprises() {

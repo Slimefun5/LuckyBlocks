@@ -1,0 +1,10 @@
+_LUCKYBLOCKS_GROUP_ICON:
+  name: "&r幸运方块"
+LUCKY_BLOCK:
+  name: "&f幸运方块"
+LUCKY_BLOCK_LUCKY:
+  name: "&f非常幸运的方块"
+LUCKY_BLOCK_UNLUCKY:
+  name: "&f非常不幸的方块"
+PANDORAS_BOX:
+  name: "&5潘多拉魔盒"

@@ -1,19 +1,10 @@
-# Deutsche Übersetzungen für SlimefunLuckyBlocks-Items
 _LUCKYBLOCKS_GROUP_ICON:
   name: "&rGlücksblöcke"
 LUCKY_BLOCK:
   name: "&fGlücksblock"
-  lore:
-    - "&7Glück: &f0"
 LUCKY_BLOCK_LUCKY:
   name: "&fSehr glücklicher Block"
-  lore:
-    - "&7Glück: &a+80"
 LUCKY_BLOCK_UNLUCKY:
   name: "&fSehr unglücklicher Block"
-  lore:
-    - "&7Glück: &c-80"
 PANDORAS_BOX:
   name: "&5Büchse der Pandora"
-  lore:
-    - "&7Glück: &c&oFEHLER"

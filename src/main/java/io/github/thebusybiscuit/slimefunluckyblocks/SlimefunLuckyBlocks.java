@@ -1,9 +1,12 @@
 package io.github.thebusybiscuit.slimefunluckyblocks;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.logging.Level;
 
 import org.bukkit.Color;
@@ -31,6 +34,8 @@ import io.github.thebusybiscuit.slimefun5.libraries.dough.common.CommonPatterns;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiText;
+import io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiTopic;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.CustomItemSurprise;
@@ -144,19 +149,84 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerWiki() {
-        io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiText wiki = io.github.thebusybiscuit.slimefun5.implementation.Slimefun.getWikiText();
-        String topicId = "addon_luckyblocks";
-        wiki.registerTopic(new io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiTopic(topicId, "Lucky Blocks", io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial.SPONGE, "&7Risk it for a surprise"));
-        wiki.setMechanic(topicId, java.util.Arrays.asList(
-            "&7Risk it for a surprise.", "",
-            "&7Break a Lucky Block and one of many", "&7random Surprises triggers - a generous", "&7reward, or a nasty trick.", "",
-            "&7Craft Lucky Blocks in different tiers;", "&7higher tiers roll rarer outcomes.", "",
-            "&7Click an item below for its recipe."));
-        java.util.List<String> items = new java.util.ArrayList<>();
-        for (io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem item : io.github.thebusybiscuit.slimefun5.implementation.Slimefun.getRegistry().getEnabledSlimefunItems()) {
-            try { if (item.getAddon() == this) { items.add(item.getId()); } } catch (Exception | LinkageError ignored) { }
+        WikiText wiki = Slimefun.getWikiText();
+
+        for (Map.Entry<ItemGroup, List<String>> entry : groupOwnItemsByItemGroup().entrySet()) {
+            ItemGroup group = entry.getKey();
+            String topicId = "addon_luckyblocks_" + group.getKey().getKey();
+
+            wiki.registerTopic(new WikiTopic(topicId, "Lucky Blocks", XMaterial.SPONGE, "&7Place or break it and pray to RNGesus"));
+            wiki.setMechanic(topicId, getLuckyBlocksMechanic());
+            wiki.setTopicItems(topicId, entry.getValue());
         }
-        wiki.setTopicItems(topicId, items);
+
+        registerItemPages(wiki);
+    }
+
+    /**
+     * Buckets every {@link SlimefunItem} owned by this addon under its
+     * {@link ItemGroup}. The list of ids is built dynamically from the registry
+     * so it never has to be maintained by hand.
+     *
+     * @return a {@link LinkedHashMap} of {@link ItemGroup} to its owned item ids
+     */
+    @Nonnull
+    private Map<ItemGroup, List<String>> groupOwnItemsByItemGroup() {
+        Map<ItemGroup, List<String>> buckets = new LinkedHashMap<>();
+
+        for (SlimefunItem item : Slimefun.getRegistry().getEnabledSlimefunItems()) {
+            try {
+                if (item.getAddon() == this) {
+                    buckets.computeIfAbsent(item.getItemGroup(), key -> new ArrayList<>()).add(item.getId());
+                }
+            } catch (Exception | LinkageError ignored) {
+                // Skip items that fail to resolve their addon or group.
+            }
+        }
+
+        return buckets;
+    }
+
+    @Nonnull
+    private List<String> getLuckyBlocksMechanic() {
+        return Arrays.asList(
+            "&7Risk it for a surprise.", "",
+            "&7Craft a &fLucky Block&7, drop it into the world", "&7and break it - one of dozens of random",
+            "&7&oSurprises&7 fires the moment it shatters.", "",
+            "&aLucky&7 rolls shower you with diamonds, golden", "&7apples, enchanted gear, tamed pets and XP.",
+            "&cUnlucky&7 rolls answer with TNT rain, charged", "&7creepers, anvils, cobwebs and the dreaded void hole.", "",
+            "&7Higher tiers tilt the odds: the &aVery lucky Block&7", "&7(&a+80&7) only rolls good outcomes, the &cVery unlucky",
+            "&7Block&7 (&c-80&7) only bad ones, while &5Pandora\"s Box&7", "&7unleashes the rarest, most chaotic events of all.", "",
+            "&7Surprises are toggled in the config under &fevents&7,", "&7and you can add your own under &fcustom&7.", "",
+            "&7Click an item below for its recipe.");
+    }
+
+    private void registerItemPages(@Nonnull WikiText wiki) {
+        wiki.set("_LUCKYBLOCKS_GROUP_ICON", Arrays.asList(
+            "&7The &fLucky Blocks&7 category.", "",
+            "&7Every block in here gambles a &oSurprise&7", "&7against you when broken - reward or ruin."));
+
+        wiki.set("LUCKY_BLOCK", Arrays.asList(
+            "&7A &fLucky Block&7 with a luck level of &f0&7.", "",
+            "&7Break it for a fair coin-flip between a", "&agenerous reward&7 and a &cnasty trick&7.", "",
+            "&7Crafted from &68 Gold (12-Karat)&7 around a", "&7Dispenser, it is also the core of every other tier."));
+
+        wiki.set("LUCKY_BLOCK_LUCKY", Arrays.asList(
+            "&7A &aVery lucky Block&7 (&a+80&7 luck).", "",
+            "&7Only &arewarding Surprises&7 can roll here:", "&7diamonds, emeralds, golden apples,",
+            "&7enchanted gear, tamed pets and XP rain.", "",
+            "&7Craft it by surrounding a &fLucky Block&7 with", "&6Gold (12-Karat)&7 on its sides."));
+
+        wiki.set("LUCKY_BLOCK_UNLUCKY", Arrays.asList(
+            "&7A &cVery unlucky Block&7 (&c-80&7 luck).", "",
+            "&7Only &cpunishing Surprises&7 can roll here:", "&7TNT rain, charged creepers, anvils,",
+            "&7explosions and the bottomless void hole.", "",
+            "&7Craft it by surrounding a &fLucky Block&7 with", "&aSpider Eyes&7 - place it far from anything you value."));
+
+        wiki.set("PANDORAS_BOX", Arrays.asList(
+            "&5Pandora\"s Box&7 - luck level &c&oERROR&7.", "",
+            "&7Reserved for the rarest, most chaotic events,", "&7like swarms of Reapers and rampaging Iron Golems.", "",
+            "&7Craft it from &fLapis&7 and &6Planks&7 around a", "&fLucky Block&7. You have been warned."));
     }
 
     private void registerDefaultSurprises() {

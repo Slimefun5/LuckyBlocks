@@ -140,6 +140,23 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         getLogger().log(Level.INFO, "Loaded {0} different Surprises!", surprises.size());
 
         Slimefun.getItemTranslationService().registerTranslations(this);
+        registerWiki();
+    }
+
+    private void registerWiki() {
+        io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiText wiki = io.github.thebusybiscuit.slimefun5.implementation.Slimefun.getWikiText();
+        String topicId = "addon_luckyblocks";
+        wiki.registerTopic(new io.github.thebusybiscuit.slimefun5.core.guide.wiki.WikiTopic(topicId, "Lucky Blocks", io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial.SPONGE, "&7Risk it for a surprise"));
+        wiki.setMechanic(topicId, java.util.Arrays.asList(
+            "&7Risk it for a surprise.", "",
+            "&7Break a Lucky Block and one of many", "&7random Surprises triggers - a generous", "&7reward, or a nasty trick.", "",
+            "&7Craft Lucky Blocks in different tiers;", "&7higher tiers roll rarer outcomes.", "",
+            "&7Click an item below for its recipe."));
+        java.util.List<String> items = new java.util.ArrayList<>();
+        for (io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem item : io.github.thebusybiscuit.slimefun5.implementation.Slimefun.getRegistry().getEnabledSlimefunItems()) {
+            try { if (item.getAddon() == this) { items.add(item.getId()); } } catch (Exception | LinkageError ignored) { }
+        }
+        wiki.setTopicItems(topicId, items);
     }
 
     private void registerDefaultSurprises() {

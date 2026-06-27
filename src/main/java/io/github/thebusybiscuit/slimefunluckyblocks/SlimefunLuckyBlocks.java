@@ -446,7 +446,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/TheBusyBiscuit/luckyblocks-sf/issues";
+        return "https://github.com/Slimefun5/LuckyBlocks/issues";
     }
 
 }

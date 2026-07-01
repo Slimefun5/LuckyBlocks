@@ -4,7 +4,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Slimefun5/LuckyBlocks/total)
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/LuckyBlocks?style=social)](https://github.com/Slimefun5/LuckyBlocks)
-[![bStats](https://bStats.org/signatures/bukkit/LuckyBlocks.svg)](https://bStats.org/plugin/bukkit/LuckyBlocks/31438)
+[![bStats](https://bStats.org/signatures/bukkit/SlimefunLuckyBlocks.svg)](https://bStats.org/plugin/bukkit/SlimefunLuckyBlocks/31438)
 
 A Slimefun addon that adds Lucky Blocks with randomized rewards and events.
 
@@ -43,7 +43,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.1")
+    "githubCompileOnly"("Slimefun5:LuckyBlocks:v1.0.2")
 }
 ```
 

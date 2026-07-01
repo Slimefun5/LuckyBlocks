@@ -4,12 +4,13 @@ import java.util.Random;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -28,14 +29,14 @@ public final class DyeSurprise implements Surprise {
 
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.CYAN_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.LIGHT_BLUE_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.LIME_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.MAGENTA_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.ORANGE_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.PINK_DYE));
-		l.getWorld().dropItemNaturally(l, new ItemStack(Material.PURPLE_DYE));
-		p.sendTitle(p.getName(), ChatColor.translateAlternateColorCodes('&', " has almost &b&odyed"), 10, 20, 10);
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.CYAN_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.LIGHT_BLUE_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.LIME_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.MAGENTA_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.ORANGE_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.PINK_DYE)));
+		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.PURPLE_DYE)));
+		LuckyBlockCompat.sendTitle(p, p.getName(), ChatColor.translateAlternateColorCodes('&', " has almost &b&odyed"), 10, 20, 10);
 	}
 
 	@Nonnull

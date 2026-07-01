@@ -1,0 +1,10 @@
+_LUCKYBLOCKS_GROUP_ICON:
+  name: "&rGlücksblöcke"
+LUCKY_BLOCK:
+  name: "&fGlücksblock"
+LUCKY_BLOCK_LUCKY:
+  name: "&fSehr glücklicher Block"
+LUCKY_BLOCK_UNLUCKY:
+  name: "&fSehr unglücklicher Block"
+PANDORAS_BOX:
+  name: "&5Büchse der Pandora"

@@ -9,6 +9,7 @@ import org.bukkit.util.Vector;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -27,7 +28,7 @@ public final class HighJumpSurprise implements Surprise {
 
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
-		p.sendTitle("", ChatColor.translateAlternateColorCodes('&', "&bUp up and away!"), 10, 20, 10);
+		LuckyBlockCompat.sendTitle(p, "", ChatColor.translateAlternateColorCodes('&', "&bUp up and away!"), 10, 20, 10);
 		p.setVelocity(new Vector(0, 2.75, 0));
 	}
 

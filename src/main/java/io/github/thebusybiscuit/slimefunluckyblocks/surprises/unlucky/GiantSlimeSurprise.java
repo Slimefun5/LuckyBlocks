@@ -3,11 +3,12 @@ package io.github.thebusybiscuit.slimefunluckyblocks.surprises.unlucky;
 import java.util.Random;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
 
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
+import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -26,8 +27,8 @@ public final class GiantSlimeSurprise implements Surprise {
 
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
-		p.getLocation().getBlock().setType(Material.COBWEB);
-		p.getEyeLocation().getBlock().setType(Material.COBWEB);
+		p.getLocation().getBlock().setType(LuckyBlockCompat.safe(XMaterial.COBWEB));
+		p.getEyeLocation().getBlock().setType(LuckyBlockCompat.safe(XMaterial.COBWEB));
 	}
 
 	@Nonnull

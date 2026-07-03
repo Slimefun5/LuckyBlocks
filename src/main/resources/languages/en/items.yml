@@ -1,0 +1,54 @@
+_LUCKYBLOCKS_GROUP_ICON:
+  name: "&rLucky Blocks"
+  type:
+    - "&7&oMisc"
+
+LUCKY_BLOCK:
+  name: "&fLucky Block"
+  type:
+    - "&7&oMisc"
+  description:
+    - "&7Place it in the world and break it to"
+    - "&7trigger a random Surprise - reward or ruin."
+  stats:
+    - "&7Luck: &f0"
+  usage:
+    - "&eBreak&7 to trigger a random Surprise"
+
+LUCKY_BLOCK_LUCKY:
+  name: "&fVery lucky Block"
+  type:
+    - "&7&oMisc"
+  description:
+    - "&7Only rewarding Surprises can roll from this"
+    - "&7Block - diamonds, golden apples, enchanted"
+    - "&7gear, tamed pets and XP rain."
+  stats:
+    - "&7Luck: &a+80"
+  usage:
+    - "&eBreak&7 to trigger a random lucky Surprise"
+
+LUCKY_BLOCK_UNLUCKY:
+  name: "&fVery unlucky Block"
+  type:
+    - "&7&oMisc"
+  description:
+    - "&7Only punishing Surprises can roll from this"
+    - "&7Block - TNT rain, charged creepers, anvils,"
+    - "&7explosions and the bottomless void hole."
+  stats:
+    - "&7Luck: &c-80"
+  usage:
+    - "&eBreak&7 to trigger a random unlucky Surprise"
+
+PANDORAS_BOX:
+  name: '&5Pandora"s Box'
+  type:
+    - "&7&oMisc"
+  description:
+    - "&7Reserved for the rarest, most chaotic events,"
+    - "&7like swarms of Reapers and rampaging Iron Golems."
+  stats:
+    - "&7Luck: &c&oERROR"
+  usage:
+    - "&eBreak&7 to trigger a random Pandora Surprise"

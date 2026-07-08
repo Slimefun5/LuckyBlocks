@@ -18,11 +18,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-<<<<<<< HEAD
-import dev.walshy.sfmetrics.MetricsModule;
-=======
 import org.bstats.bukkit.Metrics;
->>>>>>> origin/experimental
 import org.bukkit.potion.PotionEffect;
 
 import javax.annotation.Nonnull;
@@ -114,25 +110,13 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
-<<<<<<< HEAD
-        MetricsModule.setup(this, 31438);
-=======
         new Metrics(this, 31438);
->>>>>>> origin/experimental
 
         cfg = new Config(this);
 
         // Setting up bStats
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ItemGroup itemGroup = new ItemGroup(new NamespacedKey(this, "lucky_blocks"), CustomItemStack.create(VersionedPlayerHead.getItemStack(VersionedPlayerHead.hashToBase64(TEXTURE)), "&rLucky Blocks"));
-=======
-        ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), new SlimefunItemStack("_LUCKYBLOCKS_GROUP_ICON", TEXTURE, "&rLucky Blocks").item()).setTheme("misc");
->>>>>>> origin/experimental
-=======
         ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), new SlimefunItemStack("_LUCKYBLOCKS_GROUP_ICON", TEXTURE).item()).setTheme("misc");
->>>>>>> origin/experimental
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE);
         SlimefunItemStack veryLuckyBlock = new SlimefunItemStack("LUCKY_BLOCK_LUCKY", TEXTURE);

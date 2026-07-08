@@ -1,0 +1,22 @@
+# Per-item balance scores (0-100) for LuckyBlocks, relative to vanilla Minecraft.
+# Read by Slimefun's BalanceService (overrides the auto heuristic). Bands:
+#   0-10 Trivial | 11-25 Standard | 26-40 Advanced | 41-69 Powerful | 70-100 Overpowered
+#   (vanilla anchors: iron gear ~15, netherite ~30, beacon ~35, end crystal ~70, mace ~85)
+scores:
+  # --- LUCKY_BLOCK: base tier, draws from all 48 non-Pandora surprises (19 lucky/13 neutral/16 unlucky) ---
+  # Rewards are modest (single ore blocks, food, vanilla-legal gear w/ level-10 enchants); real risk from
+  # explosion (7-block radius), TNT/anvil rain, and the void hole. Net EV lands close to a coin flip.
+  LUCKY_BLOCK: 27
+  # --- LUCKY_BLOCK_LUCKY: only draws from the 19 LUCKY surprises, guaranteed positive outcome ---
+  # Best rolls hand out beyond-vanilla enchant levels (Sharpness/Protection/Efficiency X) on gear, 8 tamed
+  # wolves/cats, or a handful of ore blocks - never a full kit, but reliably better than a random chest.
+  LUCKY_BLOCK_LUCKY: 40
+  # --- LUCKY_BLOCK_UNLUCKY: only draws from the 16 UNLUCKY surprises, guaranteed negative outcome ---
+  # Genuinely destructive (explosion, TNT/anvil rain, void hole erasing terrain) but grants the breaker
+  # nothing in return - pure liability, so it scores lower than the balanced base block despite the danger.
+  LUCKY_BLOCK_UNLUCKY: 24
+  # --- PANDORAS_BOX: only draws from the 2 PANDORA surprises (Reapers, Iron Golem Invasion) ---
+  # No loot payoff by default - it's an ambush of permanently buffed (Strength/Speed, 999999999-tick)
+  # mobs (4x 120HP invisible zombies or 12x hasted iron golems) that can wipe an unready player.
+  # The most disruptive/chaotic tier of the four, matching its in-game "reserved for rarest events" billing.
+  PANDORAS_BOX: 45

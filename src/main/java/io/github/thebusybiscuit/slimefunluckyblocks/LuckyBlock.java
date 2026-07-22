@@ -82,6 +82,8 @@ public class LuckyBlock extends SlimefunItem {
     public void register(@Nonnull SlimefunLuckyBlocks plugin, @Nonnull Collection<Surprise> surprises, @Nonnull Predicate<Surprise> predicate) {
         this.surprises = surprises;
         this.predicate = predicate;
+        // Placeable head-textured blocks; the guide heuristic can't type these, so declare them explicitly.
+        setGuideType("decoration");
         super.register(plugin);
     }
 

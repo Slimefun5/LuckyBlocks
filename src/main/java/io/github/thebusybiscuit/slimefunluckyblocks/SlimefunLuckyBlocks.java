@@ -117,8 +117,6 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
 
         cfg = new Config(this);
 
-        // Setting up bStats
-        
         ItemGroup itemGroup = new ItemGroup(new io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey("slimefunluckyblocks", "lucky_blocks"), new SlimefunItemStack("_LUCKYBLOCKS_GROUP_ICON", TEXTURE).item()).setTheme("misc");
 
         SlimefunItemStack luckyBlock = new SlimefunItemStack("LUCKY_BLOCK", TEXTURE);
@@ -233,7 +231,6 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
     }
 
     private void registerDefaultSurprises() {
-        // Lucky Surprises
         registerSurprise(new CookedFoodSurprise());
         registerSurprise(new GoldenAppleSurprise());
         registerSurprise(new DiamondBlockSurprise());
@@ -255,7 +252,6 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         registerSurprise(new UnluckyPotionsSurprise());
         registerSurprise(new CakeSurprise());
 
-        // Neutral Surprises
         registerSurprise(new GrootSurprise());
         registerSurprise(new RawFoodSurprise());
         registerSurprise(new FishSurprise());
@@ -270,7 +266,6 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         registerSurprise(new PotatOSSurprise());
         registerSurprise(new JerrySlimeSurprise());
 
-        // Unlucky Surprises
         registerSurprise(new ChargedCreeperSurprise());
         registerSurprise(new WitchSurprise());
         registerSurprise(new ExplosionSurprise());
@@ -288,13 +283,11 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         registerSurprise(new GiantSlimeSurprise());
         registerSurprise(new ZombiePigmenSurprise());
 
-        // Pandora Box Surprises
         registerSurprise(new ReapersSurprise());
         registerSurprise(new IronGolemsSurprise());
     }
 
     private void registerCustomSurprises() {
-        // CustomItem Surprises
         if (cfg.getValue("custom") != null && !cfg.getKeys("custom").isEmpty()) {
             for (String name : cfg.getKeys("custom")) {
                 LuckLevel luckLevel = LuckLevel.NEUTRAL;

@@ -1,10 +1,20 @@
-_LUCKYBLOCKS_GROUP_ICON:
-  name: "&rBlocchi fortunati"
 LUCKY_BLOCK:
-  name: "&fBlocco fortunato"
+  name: '&fBlocco fortunato'
+  type:
+  - '&7&oVarie'
 LUCKY_BLOCK_LUCKY:
-  name: "&fBlocco molto fortunato"
+  name: '&fBlocco molto fortunato'
+  type:
+  - '&7&oVarie'
 LUCKY_BLOCK_UNLUCKY:
-  name: "&fBlocco molto sfortunato"
+  name: '&fBlocco molto sfortunato'
+  type:
+  - '&7&oVarie'
 PANDORAS_BOX:
-  name: "&5Vaso di Pandora"
+  name: '&5Vaso di Pandora'
+  type:
+  - '&7&oVarie'
+_LUCKYBLOCKS_GROUP_ICON:
+  name: '&rBlocchi fortunati'
+  type:
+  - '&7&oVarie'

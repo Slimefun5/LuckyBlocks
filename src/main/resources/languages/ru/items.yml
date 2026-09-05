@@ -1,10 +1,20 @@
-_LUCKYBLOCKS_GROUP_ICON:
-  name: "&rСчастливые блоки"
 LUCKY_BLOCK:
-  name: "&fСчастливый блок"
+  name: '&fСчастливый блок'
+  type:
+  - '&7&oРазное'
 LUCKY_BLOCK_LUCKY:
-  name: "&fОчень счастливый блок"
+  name: '&fОчень счастливый блок'
+  type:
+  - '&7&oРазное'
 LUCKY_BLOCK_UNLUCKY:
-  name: "&fОчень несчастливый блок"
+  name: '&fОчень несчастливый блок'
+  type:
+  - '&7&oРазное'
 PANDORAS_BOX:
-  name: "&5Ящик Пандоры"
+  name: '&5Ящик Пандоры'
+  type:
+  - '&7&oРазное'
+_LUCKYBLOCKS_GROUP_ICON:
+  name: '&rСчастливые блоки'
+  type:
+  - '&7&oРазное'

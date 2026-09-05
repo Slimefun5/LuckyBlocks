@@ -1,10 +1,20 @@
-_LUCKYBLOCKS_GROUP_ICON:
-  name: "&rSzczęśliwe bloki"
 LUCKY_BLOCK:
-  name: "&fSzczęśliwy blok"
+  name: '&fSzczęśliwy blok'
+  type:
+  - '&7&oRóżne'
 LUCKY_BLOCK_LUCKY:
-  name: "&fBardzo szczęśliwy blok"
+  name: '&fBardzo szczęśliwy blok'
+  type:
+  - '&7&oRóżne'
 LUCKY_BLOCK_UNLUCKY:
-  name: "&fBardzo pechowy blok"
+  name: '&fBardzo pechowy blok'
+  type:
+  - '&7&oRóżne'
 PANDORAS_BOX:
-  name: "&5Puszka Pandory"
+  name: '&5Puszka Pandory'
+  type:
+  - '&7&oRóżne'
+_LUCKYBLOCKS_GROUP_ICON:
+  name: '&rSzczęśliwe bloki'
+  type:
+  - '&7&oRóżne'

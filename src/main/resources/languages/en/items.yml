@@ -42,7 +42,7 @@ LUCKY_BLOCK_UNLUCKY:
     - "&eBreak&7 to trigger a random unlucky Surprise"
 
 PANDORAS_BOX:
-  name: '&5Pandora"s Box'
+  name: "&5Pandora's Box"
   type:
     - "&7&oMisc"
   description:

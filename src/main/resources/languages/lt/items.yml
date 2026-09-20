@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Padėkite jį pasaulyje ir sulaužykite, kad'
+  - '&7sukeltumėte atsitiktinį siurprizą - atlygį ar pražūtį.'
+  name: '&fLaimingas blokas'
+  stats:
+  - '&7Sėkmė: &f0'
   type:
   - '&7&oĮvairūs'
+  usage:
+  - '&eSulaužykite&7, kad sukeltumėte atsitiktinį siurprizą'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Iš šio bloko gali iškristi tik atlygį duodantys'
+  - '&7siurprizai - deimantai, auksiniai obuoliai, užkerėta'
+  - '&7įranga, prijaukinti augintiniai ir XP lietus.'
+  name: '&fLabai laimingas blokas'
+  stats:
+  - '&7Sėkmė: &a+80'
   type:
   - '&7&oĮvairūs'
+  usage:
+  - '&eSulaužykite&7, kad sukeltumėte atsitiktinį laimingą siurprizą'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Iš šio bloko gali iškristi tik baudžiantys'
+  - '&7siurprizai - TNT lietus, įkrauti kriperiai, priekalai,'
+  - '&7sprogimai ir bedugnė tuštumos skylė.'
+  name: '&fLabai nelaimingas blokas'
+  stats:
+  - '&7Sėkmė: &c-80'
   type:
   - '&7&oĮvairūs'
+  usage:
+  - '&eSulaužykite&7, kad sukeltumėte atsitiktinį nelaimingą siurprizą'
 PANDORAS_BOX:
+  description:
+  - '&7Skirta rečiausiems, chaotiškiausiems įvykiams,'
+  - '&7tokiems kaip giltinių spiečiai ir siautėjantys geležiniai golemai.'
+  name: '&5Pandoros skrynia'
+  stats:
+  - '&7Sėkmė: &c&oKLAIDA'
   type:
   - '&7&oĮvairūs'
+  usage:
+  - '&eSulaužykite&7, kad sukeltumėte atsitiktinį Pandoros siurprizą'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rLaimingi blokai'
   type:
   - '&7&oĮvairūs'

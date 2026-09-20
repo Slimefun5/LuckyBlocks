@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Novieto to pasaulē un salauz, lai'
+  - '&7izraisītu nejaušu pārsteigumu - balvu vai postu.'
+  name: '&fLaimes bloks'
+  stats:
+  - '&7Veiksme: &f0'
   type:
   - '&7&oDažādi'
+  usage:
+  - '&eSalauz&7, lai izraisītu nejaušu pārsteigumu'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7No šī bloka var izkrist tikai atalgojoši'
+  - '&7pārsteigumi - dimanti, zelta āboli, apburts'
+  - '&7ekipējums, pieradināti dzīvnieki un XP lietus.'
+  name: '&fĻoti laimīgs bloks'
+  stats:
+  - '&7Veiksme: &a+80'
   type:
   - '&7&oDažādi'
+  usage:
+  - '&eSalauz&7, lai izraisītu nejaušu laimīgu pārsteigumu'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7No šī bloka var izkrist tikai sodoši'
+  - '&7pārsteigumi - TNT lietus, uzlādēti krīperi, laktas,'
+  - '&7sprādzieni un bezdibena tukšuma caurums.'
+  name: '&fĻoti nelaimīgs bloks'
+  stats:
+  - '&7Veiksme: &c-80'
   type:
   - '&7&oDažādi'
+  usage:
+  - '&eSalauz&7, lai izraisītu nejaušu nelaimīgu pārsteigumu'
 PANDORAS_BOX:
+  description:
+  - '&7Paredzēta retākajiem un haotiskākajiem notikumiem,'
+  - '&7piemēram, Reaper bariem un trakojošiem dzelzs golemiem.'
+  name: '&5Pandoras lāde'
+  stats:
+  - '&7Veiksme: &c&oKĻŪDA'
   type:
   - '&7&oDažādi'
+  usage:
+  - '&eSalauz&7, lai izraisītu nejaušu Pandoras pārsteigumu'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rLaimes bloki'
   type:
   - '&7&oDažādi'

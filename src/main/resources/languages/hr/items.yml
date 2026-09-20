@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Postavi ga u svijet i razbij da'
+  - '&7pokreneš nasumično iznenađenje - nagradu ili propast.'
+  name: '&fSretni blok'
+  stats:
+  - '&7Sreća: &f0'
   type:
   - '&7&oRazno'
+  usage:
+  - '&eRazbij&7 za nasumično iznenađenje'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Iz ovog bloka mogu pasti samo nagradna'
+  - '&7iznenađenja - dijamanti, zlatne jabuke, začarana'
+  - '&7oprema, pripitomljeni ljubimci i kiša XP.'
+  name: '&fVrlo sretni blok'
+  stats:
+  - '&7Sreća: &a+80'
   type:
   - '&7&oRazno'
+  usage:
+  - '&eRazbij&7 za nasumično sretno iznenađenje'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Iz ovog bloka mogu pasti samo kaznena'
+  - '&7iznenađenja - kiša TNT-a, nabijeni creeperi, nakovnji,'
+  - '&7eksplozije i bezdana rupa praznine.'
+  name: '&fVrlo nesretni blok'
+  stats:
+  - '&7Sreća: &c-80'
   type:
   - '&7&oRazno'
+  usage:
+  - '&eRazbij&7 za nasumično nesretno iznenađenje'
 PANDORAS_BOX:
+  description:
+  - '&7Rezervirana za najrjeđe, najkaotičnije događaje,'
+  - '&7poput rojeva Žetelaca i pobješnjelih željeznih golema.'
+  name: '&5Pandorina kutija'
+  stats:
+  - '&7Sreća: &c&oGREŠKA'
   type:
   - '&7&oRazno'
+  usage:
+  - '&eRazbij&7 za nasumično Pandorino iznenađenje'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rSretni blokovi'
   type:
   - '&7&oRazno'

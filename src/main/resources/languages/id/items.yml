@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Letakkan di dunia lalu hancurkan untuk'
+  - '&7memicu Kejutan acak, hadiah atau petaka.'
+  name: '&fBlok Keberuntungan'
+  stats:
+  - '&7Keberuntungan: &f0'
   type:
   - '&7&oLainnya'
+  usage:
+  - '&eHancurkan&7 untuk memicu Kejutan acak'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Hanya Kejutan berhadiah yang bisa muncul dari'
+  - '&7Blok ini: berlian, apel emas, perlengkapan'
+  - '&7bermantra, hewan jinak dan hujan XP.'
+  name: '&fBlok Sangat Beruntung'
+  stats:
+  - '&7Keberuntungan: &a+80'
   type:
   - '&7&oLainnya'
+  usage:
+  - '&eHancurkan&7 untuk memicu Kejutan beruntung acak'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Hanya Kejutan yang menghukum bisa muncul dari'
+  - '&7Blok ini: hujan TNT, creeper bermuatan, landasan,'
+  - '&7ledakan dan lubang hampa tanpa dasar.'
+  name: '&fBlok Sangat Sial'
+  stats:
+  - '&7Keberuntungan: &c-80'
   type:
   - '&7&oLainnya'
+  usage:
+  - '&eHancurkan&7 untuk memicu Kejutan sial acak'
 PANDORAS_BOX:
+  description:
+  - '&7Disediakan untuk peristiwa terlangka dan terkacau,'
+  - '&7seperti gerombolan Reaper dan Golem Besi yang mengamuk.'
+  name: '&5Kotak Pandora'
+  stats:
+  - '&7Keberuntungan: &c&oGALAT'
   type:
   - '&7&oLainnya'
+  usage:
+  - '&eHancurkan&7 untuk memicu Kejutan Pandora acak'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rBlok Keberuntungan'
   type:
   - '&7&oLainnya'

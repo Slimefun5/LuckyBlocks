@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Placera det i världen och bryt det för att'
+  - '&7utlösa en slumpmässig överraskning - belöning eller undergång.'
+  name: '&fLyckoblock'
+  stats:
+  - '&7Tur: &f0'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryt&7 för att utlösa en slumpmässig överraskning'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Endast belönande överraskningar kan falla ur detta'
+  - '&7block - diamanter, gyllene äpplen, förtrollad'
+  - '&7utrustning, tämjda husdjur och XP-regn.'
+  name: '&fMycket tursamt block'
+  stats:
+  - '&7Tur: &a+80'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryt&7 för att utlösa en slumpmässig tursam överraskning'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Endast bestraffande överraskningar kan falla ur detta'
+  - '&7block - TNT-regn, laddade creepers, städ,'
+  - '&7explosioner och det bottenlösa tomrumshålet.'
+  name: '&fMycket otursamt block'
+  stats:
+  - '&7Tur: &c-80'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryt&7 för att utlösa en slumpmässig otursam överraskning'
 PANDORAS_BOX:
+  description:
+  - '&7Reserverad för de sällsyntaste, mest kaotiska händelserna,'
+  - '&7som svärmar av Reapers och rasande järngolem.'
+  name: '&5Pandoras ask'
+  stats:
+  - '&7Tur: &c&oFEL'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryt&7 för att utlösa en slumpmässig Pandora-överraskning'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rLyckoblock'
   type:
   - '&7&oDiverse'

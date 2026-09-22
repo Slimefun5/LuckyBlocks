@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Placer den i verden og bryd den for at'
+  - '&7udløse en tilfældig overraskelse - belønning eller ruin.'
+  name: '&fLykkeblok'
+  stats:
+  - '&7Held: &f0'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryd&7 for at udløse en tilfældig overraskelse'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Kun belønnende overraskelser kan trækkes fra denne'
+  - '&7blok - diamanter, guldæbler, fortryllet'
+  - '&7udstyr, tæmmede kæledyr og XP-regn.'
+  name: '&fMeget heldig blok'
+  stats:
+  - '&7Held: &a+80'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryd&7 for at udløse en tilfældig heldig overraskelse'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Kun straffende overraskelser kan trækkes fra denne'
+  - '&7blok - TNT-regn, ladede creepere, ambolte,'
+  - '&7eksplosioner og det bundløse tomrumshul.'
+  name: '&fMeget uheldig blok'
+  stats:
+  - '&7Held: &c-80'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryd&7 for at udløse en tilfældig uheldig overraskelse'
 PANDORAS_BOX:
+  description:
+  - '&7Forbeholdt de sjældneste og mest kaotiske hændelser,'
+  - '&7som sværme af Reapers og hærgende jerngolemmer.'
+  name: '&5Pandoras æske'
+  stats:
+  - '&7Held: &c&oFEJL'
   type:
   - '&7&oDiverse'
+  usage:
+  - '&eBryd&7 for at udløse en tilfældig Pandora-overraskelse'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rLykkeblokke'
   type:
   - '&7&oDiverse'

@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Letakkan ia di dunia dan pecahkan ia untuk'
+  - '&7mencetuskan Kejutan rawak - ganjaran atau kemusnahan.'
+  name: '&fBlok Bertuah'
+  stats:
+  - '&7Tuah: &f0'
   type:
   - '&7&oPelbagai'
+  usage:
+  - '&ePecahkan&7 untuk mencetuskan Kejutan rawak'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Hanya Kejutan berganjaran boleh keluar daripada'
+  - '&7Blok ini - berlian, epal emas, kelengkapan'
+  - '&7berpesona, haiwan jinak dan hujan XP.'
+  name: '&fBlok Sangat Bertuah'
+  stats:
+  - '&7Tuah: &a+80'
   type:
   - '&7&oPelbagai'
+  usage:
+  - '&ePecahkan&7 untuk mencetuskan Kejutan bertuah rawak'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Hanya Kejutan menghukum boleh keluar daripada'
+  - '&7Blok ini - hujan TNT, creeper bercas, andas,'
+  - '&7letupan dan lubang kekosongan tanpa dasar.'
+  name: '&fBlok Sangat Malang'
+  stats:
+  - '&7Tuah: &c-80'
   type:
   - '&7&oPelbagai'
+  usage:
+  - '&ePecahkan&7 untuk mencetuskan Kejutan malang rawak'
 PANDORAS_BOX:
+  description:
+  - '&7Dikhaskan untuk peristiwa paling nadir dan paling huru-hara,'
+  - '&7seperti kawanan Reaper dan Golem Besi yang mengamuk.'
+  name: '&5Kotak Pandora'
+  stats:
+  - '&7Tuah: &c&oRALAT'
   type:
   - '&7&oPelbagai'
+  usage:
+  - '&ePecahkan&7 untuk mencetuskan Kejutan Pandora rawak'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rBlok Bertuah'
   type:
   - '&7&oPelbagai'

@@ -1,19 +1,49 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Platziere ihn in der Welt und brich ihn, um'
+  - '&7eine zufällige Überraschung auszulösen: Lohn oder Ruin.'
   name: '&fGlücksblock'
+  stats:
+  - '&7Glück: &f0'
   type:
   - '&7&oSonstiges'
+  usage:
+  - '&eBrechen&7, um eine zufällige Überraschung auszulösen'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Aus diesem Block können nur belohnende'
+  - '&7Überraschungen kommen: Diamanten, goldene Äpfel,'
+  - '&7verzauberte Ausrüstung, zahme Tiere und XP-Regen.'
   name: '&fSehr glücklicher Block'
+  stats:
+  - '&7Glück: &a+80'
   type:
   - '&7&oSonstiges'
+  usage:
+  - '&eBrechen&7, um eine zufällige glückliche Überraschung auszulösen'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Aus diesem Block können nur bestrafende'
+  - '&7Überraschungen kommen: TNT-Regen, geladene Creeper,'
+  - '&7Ambosse, Explosionen und das bodenlose Leerenloch.'
   name: '&fSehr unglücklicher Block'
+  stats:
+  - '&7Glück: &c-80'
   type:
   - '&7&oSonstiges'
+  usage:
+  - '&eBrechen&7, um eine zufällige unglückliche Überraschung auszulösen'
 PANDORAS_BOX:
+  description:
+  - '&7Vorbehalten den seltensten, chaotischsten Ereignissen,'
+  - '&7wie Schwärmen von Reapern und wütenden Eisengolems.'
   name: '&5Büchse der Pandora'
+  stats:
+  - '&7Glück: &c&oFEHLER'
   type:
   - '&7&oSonstiges'
+  usage:
+  - '&eBrechen&7, um eine zufällige Pandora-Überraschung auszulösen'
 _LUCKYBLOCKS_GROUP_ICON:
   name: '&rGlücksblöcke'
   type:

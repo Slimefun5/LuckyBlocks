@@ -1,19 +1,49 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Plaats het in de wereld en breek het om'
+  - '&7een willekeurige verrassing te activeren - beloning of onheil.'
   name: '&fGeluksblok'
+  stats:
+  - '&7Geluk: &f0'
   type:
   - '&7&oOverig'
+  usage:
+  - '&eBreek&7 om een willekeurige verrassing te activeren'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Alleen belonende verrassingen komen uit dit'
+  - '&7blok - diamanten, gouden appels, betoverde'
+  - '&7uitrusting, tamme huisdieren en XP-regen.'
   name: '&fHeel gelukkig blok'
+  stats:
+  - '&7Geluk: &a+80'
   type:
   - '&7&oOverig'
+  usage:
+  - '&eBreek&7 om een willekeurige gelukkige verrassing te activeren'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Alleen straffende verrassingen komen uit dit'
+  - '&7blok - TNT-regen, geladen creepers, aambeelden,'
+  - '&7explosies en het bodemloze leegtegat.'
   name: '&fHeel ongelukkig blok'
+  stats:
+  - '&7Geluk: &c-80'
   type:
   - '&7&oOverig'
+  usage:
+  - '&eBreek&7 om een willekeurige ongelukkige verrassing te activeren'
 PANDORAS_BOX:
+  description:
+  - '&7Gereserveerd voor de zeldzaamste, meest chaotische gebeurtenissen,'
+  - '&7zoals zwermen Reapers en razende ijzergolems.'
   name: '&5Doos van Pandora'
+  stats:
+  - '&7Geluk: &c&oFOUT'
   type:
   - '&7&oOverig'
+  usage:
+  - '&eBreek&7 om een willekeurige Pandora-verrassing te activeren'
 _LUCKYBLOCKS_GROUP_ICON:
   name: '&rGeluksblokken'
   type:

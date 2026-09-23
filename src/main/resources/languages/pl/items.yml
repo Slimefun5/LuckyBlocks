@@ -1,19 +1,49 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Umieść go w świecie i rozbij, aby'
+  - '&7wywołać losową niespodziankę - nagrodę lub zgubę.'
   name: '&fSzczęśliwy blok'
+  stats:
+  - '&7Szczęście: &f0'
   type:
   - '&7&oRóżne'
+  usage:
+  - '&eRozbij&7 aby wywołać losową niespodziankę'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Tylko nagradzające niespodzianki wypadają z tego'
+  - '&7bloku - diamenty, złote jabłka, zaklęty'
+  - '&7sprzęt, oswojone zwierzęta i deszcz XP.'
   name: '&fBardzo szczęśliwy blok'
+  stats:
+  - '&7Szczęście: &a+80'
   type:
   - '&7&oRóżne'
+  usage:
+  - '&eRozbij&7 aby wywołać losową szczęśliwą niespodziankę'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Tylko karzące niespodzianki wypadają z tego'
+  - '&7bloku - deszcz TNT, naładowane creepery, kowadła,'
+  - '&7eksplozje i bezdenna dziura w pustkę.'
   name: '&fBardzo pechowy blok'
+  stats:
+  - '&7Szczęście: &c-80'
   type:
   - '&7&oRóżne'
+  usage:
+  - '&eRozbij&7 aby wywołać losową pechową niespodziankę'
 PANDORAS_BOX:
+  description:
+  - '&7Zarezerwowane dla najrzadszych, najbardziej chaotycznych zdarzeń,'
+  - '&7jak roje Żniwiarzy i szalejące żelazne golemy.'
   name: '&5Puszka Pandory'
+  stats:
+  - '&7Szczęście: &c&oBŁĄD'
   type:
   - '&7&oRóżne'
+  usage:
+  - '&eRozbij&7 aby wywołać losową niespodziankę Pandory'
 _LUCKYBLOCKS_GROUP_ICON:
   name: '&rSzczęśliwe bloki'
   type:

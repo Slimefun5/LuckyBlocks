@@ -1,19 +1,49 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Colócalo en el mundo y rómpelo para'
+  - '&7desencadenar una Sorpresa aleatoria: recompensa o ruina.'
   name: '&fBloque de la suerte'
+  stats:
+  - '&7Suerte: &f0'
   type:
   - '&7&oVarios'
+  usage:
+  - '&eRompe&7 para desencadenar una Sorpresa aleatoria'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Solo salen Sorpresas beneficiosas de este'
+  - '&7bloque: diamantes, manzanas doradas, equipo'
+  - '&7encantado, mascotas domadas y lluvia de XP.'
   name: '&fBloque muy afortunado'
+  stats:
+  - '&7Suerte: &a+80'
   type:
   - '&7&oVarios'
+  usage:
+  - '&eRompe&7 para desencadenar una Sorpresa afortunada aleatoria'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Solo salen Sorpresas dañinas de este'
+  - '&7bloque: lluvia de TNT, creepers cargados, yunques,'
+  - '&7explosiones y el agujero sin fondo del vacío.'
   name: '&fBloque muy desafortunado'
+  stats:
+  - '&7Suerte: &c-80'
   type:
   - '&7&oVarios'
+  usage:
+  - '&eRompe&7 para desencadenar una Sorpresa desafortunada aleatoria'
 PANDORAS_BOX:
+  description:
+  - '&7Reservado para los eventos más raros y caóticos,'
+  - '&7como enjambres de Parcas y golems de hierro enfurecidos.'
   name: '&5Caja de Pandora'
+  stats:
+  - '&7Suerte: &c&oERROR'
   type:
   - '&7&oVarios'
+  usage:
+  - '&eRompe&7 para desencadenar una Sorpresa de Pandora aleatoria'
 _LUCKYBLOCKS_GROUP_ICON:
   name: '&rBloques de la suerte'
   type:

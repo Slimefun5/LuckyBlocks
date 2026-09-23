@@ -1,19 +1,49 @@
 LUCKY_BLOCK:
+  description:
+  - '&7将它放置在世界中并破坏它，'
+  - '&7触发随机惊喜 - 奖励或灾祸。'
   name: '&f幸运方块'
+  stats:
+  - '&7幸运：&f0'
   type:
   - '&7&o杂项'
+  usage:
+  - '&e破坏&7以触发随机惊喜'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7此方块只会抽出有益的惊喜：'
+  - '&7钻石、金苹果、附魔的'
+  - '&7装备、驯服的宠物和经验之雨。'
   name: '&f非常幸运的方块'
+  stats:
+  - '&7幸运：&a+80'
   type:
   - '&7&o杂项'
+  usage:
+  - '&e破坏&7以触发随机的幸运惊喜'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7此方块只会抽出惩罚性的惊喜：'
+  - '&7TNT 之雨、充能苦力怕、铁砧、'
+  - '&7爆炸以及无底的虚空深坑。'
   name: '&f非常不幸的方块'
+  stats:
+  - '&7幸运：&c-80'
   type:
   - '&7&o杂项'
+  usage:
+  - '&e破坏&7以触发随机的不幸惊喜'
 PANDORAS_BOX:
+  description:
+  - '&7专为最稀有、最混乱的事件保留，'
+  - '&7例如成群的收割者和暴走的铁傀儡。'
   name: '&5潘多拉魔盒'
+  stats:
+  - '&7幸运：&c&o错误'
   type:
   - '&7&o杂项'
+  usage:
+  - '&e破坏&7以触发随机的潘多拉惊喜'
 _LUCKYBLOCKS_GROUP_ICON:
   name: '&r幸运方块'
   type:

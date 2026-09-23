@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Dünyaya yerleştir ve kırarak rastgele bir'
+  - '&7Sürpriz tetikle - ödül ya da felaket.'
+  name: '&fŞanslı Blok'
+  stats:
+  - '&7Şans: &f0'
   type:
   - '&7&oÇeşitli'
+  usage:
+  - '&eKır&7 rastgele bir Sürpriz tetiklemek için'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Bu Bloktan yalnızca ödüllendiren Sürprizler'
+  - '&7çıkar - elmaslar, altın elmalar, büyülü'
+  - '&7teçhizat, evcil hayvanlar ve XP yağmuru.'
+  name: '&fÇok şanslı Blok'
+  stats:
+  - '&7Şans: &a+80'
   type:
   - '&7&oÇeşitli'
+  usage:
+  - '&eKır&7 rastgele bir şanslı Sürpriz tetiklemek için'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Bu Bloktan yalnızca cezalandıran Sürprizler'
+  - '&7çıkar - TNT yağmuru, yüklü creeperlar, örsler,'
+  - '&7patlamalar ve dipsiz boşluk çukuru.'
+  name: '&fÇok şanssız Blok'
+  stats:
+  - '&7Şans: &c-80'
   type:
   - '&7&oÇeşitli'
+  usage:
+  - '&eKır&7 rastgele bir şanssız Sürpriz tetiklemek için'
 PANDORAS_BOX:
+  description:
+  - '&7En nadir, en kaotik olaylara ayrılmıştır,'
+  - '&7Reaper sürüleri ve çılgına dönmüş Demir Golemler gibi.'
+  name: '&5Pandora''nın Kutusu'
+  stats:
+  - '&7Şans: &c&oHATA'
   type:
   - '&7&oÇeşitli'
+  usage:
+  - '&eKır&7 rastgele bir Pandora Sürprizi tetiklemek için'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rŞanslı Bloklar'
   type:
   - '&7&oÇeşitli'

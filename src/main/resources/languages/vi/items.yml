@@ -1,15 +1,50 @@
 LUCKY_BLOCK:
+  description:
+  - '&7Đặt nó xuống thế giới rồi phá nó để'
+  - '&7kích hoạt một Điều Bất ngờ ngẫu nhiên, thưởng hoặc họa.'
+  name: '&fKhối May mắn'
+  stats:
+  - '&7May mắn: &f0'
   type:
   - '&7&oLinh Tinh'
+  usage:
+  - '&ePhá&7 để kích hoạt một Điều Bất ngờ ngẫu nhiên'
 LUCKY_BLOCK_LUCKY:
+  description:
+  - '&7Chỉ những Điều Bất ngờ có thưởng mới xuất hiện từ'
+  - '&7Khối này: kim cương, táo vàng, trang bị'
+  - '&7được phù phép, thú thuần hóa và mưa XP.'
+  name: '&fKhối Rất may mắn'
+  stats:
+  - '&7May mắn: &a+80'
   type:
   - '&7&oLinh Tinh'
+  usage:
+  - '&ePhá&7 để kích hoạt một Điều Bất ngờ may mắn ngẫu nhiên'
 LUCKY_BLOCK_UNLUCKY:
+  description:
+  - '&7Chỉ những Điều Bất ngờ trừng phạt mới xuất hiện từ'
+  - '&7Khối này: mưa TNT, creeper tích điện, đe,'
+  - '&7các vụ nổ và hố hư không không đáy.'
+  name: '&fKhối Rất không may'
+  stats:
+  - '&7May mắn: &c-80'
   type:
   - '&7&oLinh Tinh'
+  usage:
+  - '&ePhá&7 để kích hoạt một Điều Bất ngờ xui xẻo ngẫu nhiên'
 PANDORAS_BOX:
+  description:
+  - '&7Dành riêng cho những sự kiện hiếm nhất, hỗn loạn nhất,'
+  - '&7như đàn Reaper và Người Sắt nổi điên.'
+  name: '&5Hộp Pandora'
+  stats:
+  - '&7May mắn: &c&oLỖI'
   type:
   - '&7&oLinh Tinh'
+  usage:
+  - '&ePhá&7 để kích hoạt một Điều Bất ngờ Pandora ngẫu nhiên'
 _LUCKYBLOCKS_GROUP_ICON:
+  name: '&rKhối May mắn'
   type:
   - '&7&oLinh Tinh'

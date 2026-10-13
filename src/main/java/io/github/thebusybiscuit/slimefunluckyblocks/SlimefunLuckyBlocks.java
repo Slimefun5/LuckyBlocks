@@ -147,6 +147,7 @@ public class SlimefunLuckyBlocks extends JavaPlugin implements SlimefunAddon {
         getLogger().log(Level.INFO, "Loaded {0} different Surprises!", surprises.size());
 
         Slimefun.getItemTranslationService().registerTranslations(this);
+        Slimefun.getAddonMessageService().registerTranslations(this);
         registerWiki();
     }
 

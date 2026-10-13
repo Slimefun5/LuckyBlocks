@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
+import io.github.thebusybiscuit.slimefunluckyblocks.Messages;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -30,7 +31,8 @@ public final class CookieSurprise implements Surprise {
 	@Override
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.COOKIE)));
-		LuckyBlockCompat.sendTitle(p, "", ChatColor.translateAlternateColorCodes('&',"&bCOOOOOKKIIIIIEESSS!!!!"), 10, 20, 10);
+		LuckyBlockCompat.sendTitle(p, "", ChatColor.AQUA
+				+ Messages.get(p, "surprise.cookies", "COOOOOKKIIIIIEESSS!!!!"), 10, 20, 10);
 	}
 
 	@Nonnull

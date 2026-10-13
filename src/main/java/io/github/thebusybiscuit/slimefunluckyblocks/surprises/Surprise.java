@@ -15,7 +15,11 @@ import org.bukkit.entity.Player;
 public interface Surprise {
 
     /**
-     * Returns the display name of this surprise.
+     * Returns this surprise's identifier.
+     *
+     * @implNote It is the key an operator enables or disables the surprise under in
+     *           {@code config.yml} ({@code events.<name>}, {@code custom.<name>.enabled}), never
+     *           player-facing text, so it must stay in English.
      *
      * @return the name of this surprise
      */

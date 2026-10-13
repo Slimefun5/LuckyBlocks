@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
+import io.github.thebusybiscuit.slimefunluckyblocks.Messages;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -31,7 +32,8 @@ public final class GrootSurprise implements Surprise {
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		l.getBlock().getRelative(BlockFace.DOWN).setType(LuckyBlockCompat.safe(XMaterial.PODZOL));
 		l.getBlock().setType(LuckyBlockCompat.safe(XMaterial.OAK_SAPLING));
-		LuckyBlockCompat.sendTitle(p, "", ChatColor.translateAlternateColorCodes('&', "&6I am Groot!"), 10, 20, 10);
+		LuckyBlockCompat.sendTitle(p, "", ChatColor.GOLD
+				+ Messages.get(p, "surprise.groot", "I am Groot!"), 10, 20, 10);
 	}
 
 	@Nonnull

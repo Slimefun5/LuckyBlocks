@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
+import io.github.thebusybiscuit.slimefunluckyblocks.Messages;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 
@@ -36,7 +37,9 @@ public final class DyeSurprise implements Surprise {
 		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.ORANGE_DYE)));
 		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.PINK_DYE)));
 		l.getWorld().dropItemNaturally(l, new ItemStack(LuckyBlockCompat.safe(XMaterial.PURPLE_DYE)));
-		LuckyBlockCompat.sendTitle(p, p.getName(), ChatColor.translateAlternateColorCodes('&', " has almost &b&odyed"), 10, 20, 10);
+		LuckyBlockCompat.sendTitle(p, p.getName(), Messages.get(p, "surprise.dyed", " has almost %word%",
+				line -> line.replace("%word%", ChatColor.AQUA.toString() + ChatColor.ITALIC
+						+ Messages.get(p, "surprise.dyed-word", "dyed"))), 10, 20, 10);
 	}
 
 	@Nonnull

@@ -11,6 +11,7 @@ import javax.annotation.Nonnull;
 
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import io.github.thebusybiscuit.slimefunluckyblocks.LuckyBlockCompat;
+import io.github.thebusybiscuit.slimefunluckyblocks.Messages;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.LuckLevel;
 import io.github.thebusybiscuit.slimefunluckyblocks.surprises.Surprise;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
@@ -32,7 +33,8 @@ public final class FakeDiamondBlock implements Surprise {
 	public void activate(@Nonnull Random random, @Nonnull Player p, @Nonnull Location l) {
 		l.getBlock().getRelative(BlockFace.UP).getRelative(BlockFace.UP).setType(LuckyBlockCompat.safe(XMaterial.DIAMOND_BLOCK));
 		l.getBlock().getRelative(BlockFace.UP).setType(LuckyBlockCompat.safe(XMaterial.DIAMOND_BLOCK));
-		LuckyBlockCompat.sendTitle(p, "", ChatColor.translateAlternateColorCodes('&', "&7&oOne is real, one is not..."), 10, 20, 10);
+		LuckyBlockCompat.sendTitle(p, "", ChatColor.GRAY.toString() + ChatColor.ITALIC
+				+ Messages.get(p, "surprise.fake-diamond", "One is real, one is not..."), 10, 20, 10);
 		BlockStorage.store(random.nextInt(10) < 5 ? l.getBlock().getRelative(BlockFace.UP): l.getBlock(), "LUCKY_BLOCK_UNLUCKY");
 	}
 

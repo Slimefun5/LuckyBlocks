@@ -17,6 +17,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.EntityEquipment;
 import org.bukkit.inventory.ItemStack;
 
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XEnchantment;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 
 /**
@@ -209,23 +210,12 @@ public final class LuckyBlockCompat {
     }
 
     /**
-     * Resolves an {@link Enchantment} by its (lowercase) Minecraft key in a
-     * version-safe way. Uses {@code getByKey} on 1.13+ and the deprecated
-     * {@code getByName} lookup on older versions.
+     * Resolves an {@link Enchantment} from either its Minecraft key ({@code sharpness}) or its legacy Bukkit name
+     * ({@code DAMAGE_ALL}), on every version.
      */
     @Nullable
-    public static Enchantment getEnchantment(@Nonnull String key) {
-        if (classExists("org.bukkit.NamespacedKey")) {
-            try {
-                Class<?> keyClass = Class.forName("org.bukkit.NamespacedKey");
-                Object namespacedKey = keyClass.getMethod("minecraft", String.class).invoke(null, key);
-                return (Enchantment) Enchantment.class.getMethod("getByKey", keyClass).invoke(null, namespacedKey);
-            } catch (ReflectiveOperationException ignored) {
-                // Fall through to the legacy lookup.
-            }
-        }
-
-        return Enchantment.getByName(key.toUpperCase(java.util.Locale.ROOT));
+    public static Enchantment getEnchantment(@Nonnull String name) {
+        return XEnchantment.matchXEnchantment(name).filter(XEnchantment::isSupported).map(XEnchantment::getEnchant).orElse(null);
     }
 
     /**

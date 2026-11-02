@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Plasează-l în lume și sparge-l pentru a'
   - '&7declanșa o Surpriză aleatoare - răsplată sau ruină.'
-  name: '&fBloc Norocos'
+  name: 'Bloc Norocos'
   stats:
   - '&7Noroc: &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Doar Surprizele care răsplătesc pot ieși din acest'
   - '&7Bloc - diamante, mere de aur, echipament'
   - '&7vrăjit, animale domesticite și ploaie de XP.'
-  name: '&fBloc foarte norocos'
+  name: 'Bloc foarte norocos'
   stats:
   - '&7Noroc: &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Doar Surprizele care pedepsesc pot ieși din acest'
   - '&7Bloc - ploaie de TNT, creeperi încărcați, nicovale,'
   - '&7explozii și groapa fără fund a vidului.'
-  name: '&fBloc foarte ghinionist'
+  name: 'Bloc foarte ghinionist'
   stats:
   - '&7Noroc: &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7Rezervată celor mai rare și haotice evenimente,'
   - '&7ca roiuri de Secerători și Golemi de Fier turbați.'
-  name: '&5Cutia Pandorei'
+  name: 'Cutia Pandorei'
   stats:
   - '&7Noroc: &c&oEROARE'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eSparge&7 pentru a declanșa o Surpriză Pandora aleatoare'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rBlocuri Norocoase'
+  name: 'Blocuri Norocoase'
   type:
   - '&7&oDiverse'

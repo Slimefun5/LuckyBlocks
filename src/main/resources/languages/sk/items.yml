@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Umiestni ho vo svete a rozbi, aby si'
   - '&7spustil náhodné prekvapenie - odmenu alebo skazu.'
-  name: '&fŠťastný blok'
+  name: 'Šťastný blok'
   stats:
   - '&7Šťastie: &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Z tohto bloku môžu padnúť len odmeňujúce'
   - '&7prekvapenia - diamanty, zlaté jablká, očarovaná'
   - '&7výstroj, skrotené zvieratá a dážď XP.'
-  name: '&fVeľmi šťastný blok'
+  name: 'Veľmi šťastný blok'
   stats:
   - '&7Šťastie: &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Z tohto bloku môžu padnúť len trestajúce'
   - '&7prekvapenia - dážď TNT, nabité creepery, nákovy,'
   - '&7výbuchy a bezodná diera do prázdnoty.'
-  name: '&fVeľmi nešťastný blok'
+  name: 'Veľmi nešťastný blok'
   stats:
   - '&7Šťastie: &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7Vyhradená pre najvzácnejšie a najchaotickejšie udalosti,'
   - '&7ako kŕdle Žnecov a zúriace železné golemy.'
-  name: '&5Pandorina skrinka'
+  name: 'Pandorina skrinka'
   stats:
   - '&7Šťastie: &c&oCHYBA'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eRozbi&7 ho a spustíš náhodné prekvapenie Pandory'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rŠťastné bloky'
+  name: 'Šťastné bloky'
   type:
   - '&7&oRôzne'

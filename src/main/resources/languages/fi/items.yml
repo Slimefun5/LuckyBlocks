@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Aseta se maailmaan ja riko se'
   - '&7laukaistaksesi satunnaisen yllätyksen - palkinto tai tuho.'
-  name: '&fOnnenpalikka'
+  name: 'Onnenpalikka'
   stats:
   - '&7Onni: &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Vain palkitsevia yllätyksiä voi tulla tästä'
   - '&7palikasta - timantteja, kultaomenoita, lumottuja'
   - '&7varusteita, kesytettyjä lemmikkejä ja XP-sadetta.'
-  name: '&fHyvin onnekas palikka'
+  name: 'Hyvin onnekas palikka'
   stats:
   - '&7Onni: &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Vain rankaisevia yllätyksiä voi tulla tästä'
   - '&7palikasta - TNT-sadetta, varautuneita creepereitä, alasimia,'
   - '&7räjähdyksiä ja pohjaton tyhjyyden kuilu.'
-  name: '&fHyvin epäonnekas palikka'
+  name: 'Hyvin epäonnekas palikka'
   stats:
   - '&7Onni: &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7Varattu harvinaisimmille ja kaoottisimmille tapahtumille,'
   - '&7kuten Reaper-parville ja raivoaville rautagolemeille.'
-  name: '&5Pandoran lipas'
+  name: 'Pandoran lipas'
   stats:
   - '&7Onni: &c&oVIRHE'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eRiko&7 laukaistaksesi satunnaisen Pandora-yllätyksen'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rOnnenpalikat'
+  name: 'Onnenpalikat'
   type:
   - '&7&oSekalainen'

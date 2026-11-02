@@ -1,10 +1,10 @@
 _LUCKYBLOCKS_GROUP_ICON:
-  name: "&rLucky Blocks"
+  name: 'Lucky Blocks'
   type:
     - "&7&oMisc"
 
 LUCKY_BLOCK:
-  name: "&fLucky Block"
+  name: 'Lucky Block'
   type:
     - "&7&oMisc"
   description:
@@ -16,7 +16,7 @@ LUCKY_BLOCK:
     - "&eBreak&7 to trigger a random Surprise"
 
 LUCKY_BLOCK_LUCKY:
-  name: "&fVery lucky Block"
+  name: 'Very Lucky Block'
   type:
     - "&7&oMisc"
   description:
@@ -29,7 +29,7 @@ LUCKY_BLOCK_LUCKY:
     - "&eBreak&7 to trigger a random lucky Surprise"
 
 LUCKY_BLOCK_UNLUCKY:
-  name: "&fVery unlucky Block"
+  name: 'Very Unlucky Block'
   type:
     - "&7&oMisc"
   description:
@@ -42,7 +42,7 @@ LUCKY_BLOCK_UNLUCKY:
     - "&eBreak&7 to trigger a random unlucky Surprise"
 
 PANDORAS_BOX:
-  name: "&5Pandora's Box"
+  name: 'Pandora''s Box'
   type:
     - "&7&oMisc"
   description:

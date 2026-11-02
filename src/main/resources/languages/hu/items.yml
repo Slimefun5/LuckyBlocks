@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Helyezd el a világban, és törd össze, hogy'
   - '&7véletlen Meglepetést indíts - jutalom vagy romlás.'
-  name: '&fSzerencseblokk'
+  name: 'Szerencseblokk'
   stats:
   - '&7Szerencse: &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Csak jutalmazó Meglepetések jöhetnek ebből a'
   - '&7Blokkból - gyémántok, aranyalmák, elvarázsolt'
   - '&7felszerelés, megszelídített állatok és XP-eső.'
-  name: '&fNagyon szerencsés Blokk'
+  name: 'Nagyon szerencsés Blokk'
   stats:
   - '&7Szerencse: &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Csak büntető Meglepetések jöhetnek ebből a'
   - '&7Blokkból - TNT-eső, feltöltött creeperek, üllők,'
   - '&7robbanások és a feneketlen ürességlyuk.'
-  name: '&fNagyon szerencsétlen Blokk'
+  name: 'Nagyon szerencsétlen Blokk'
   stats:
   - '&7Szerencse: &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7A legritkább, legkaotikusabb események számára'
   - '&7fenntartva, mint a Kaszások hordái és a dühöngő Vasgólemek.'
-  name: '&5Pandora Szelencéje'
+  name: 'Pandora Szelencéje'
   stats:
   - '&7Szerencse: &c&oHIBA'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eTörd össze&7 egy véletlen Pandora-Meglepetés kiváltásához'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rSzerencseblokkok'
+  name: 'Szerencseblokkok'
   type:
   - '&7&oEgyéb'

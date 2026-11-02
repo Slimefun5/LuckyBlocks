@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Ilagay ito sa mundo at basagin para'
   - '&7pumukaw ng di-inaasahang Sorpresa - gantimpala o kapahamakan.'
-  name: '&fMapalad na Bloke'
+  name: 'Mapalad na Bloke'
   stats:
   - '&7Suwerte: &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Tanging mga Sorpresang may gantimpala ang makukuha sa'
   - '&7Bloke na ito - mga diyamante, ginintuang mansanas, enkantadong'
   - '&7kagamitan, maaamong alagang hayop at ulan ng XP.'
-  name: '&fNapakamapalad na Bloke'
+  name: 'Napakamapalad na Bloke'
   stats:
   - '&7Suwerte: &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Tanging mga Sorpresang nagpaparusa ang makukuha sa'
   - '&7Bloke na ito - ulan ng TNT, kargadong creeper, palihan,'
   - '&7mga pagsabog at ang walang-pusod na butas ng Kawalan.'
-  name: '&fNapakasawing-palad na Bloke'
+  name: 'Napakasawing-palad na Bloke'
   stats:
   - '&7Suwerte: &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7Nakalaan sa pinakabihira at pinakamagulong mga pangyayari,'
   - '&7tulad ng kuyog ng mga Reaper at nagwawalang mga Golem na Bakal.'
-  name: '&5Kahon ni Pandora'
+  name: 'Kahon ni Pandora'
   stats:
   - '&7Suwerte: &c&oMALI'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eBasagin&7 para pumukaw ng di-inaasahang Sorpresa ni Pandora'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rMga Mapalad na Bloke'
+  name: 'Mga Mapalad na Bloke'
   type:
   - '&7&oIba pa'

@@ -2,7 +2,7 @@ LUCKY_BLOCK:
   description:
   - '&7Placez-le dans le monde et cassez-le pour'
   - '&7déclencher une Surprise aléatoire - récompense ou ruine.'
-  name: '&fBloc de la chance'
+  name: 'Bloc de la chance'
   stats:
   - '&7Chance : &f0'
   type:
@@ -14,7 +14,7 @@ LUCKY_BLOCK_LUCKY:
   - '&7Seules des Surprises avantageuses peuvent sortir de ce'
   - '&7bloc - diamants, pommes dorées, équipement'
   - '&7enchanté, animaux apprivoisés et pluie d''XP.'
-  name: '&fBloc très chanceux'
+  name: 'Bloc très chanceux'
   stats:
   - '&7Chance : &a+80'
   type:
@@ -26,7 +26,7 @@ LUCKY_BLOCK_UNLUCKY:
   - '&7Seules des Surprises punitives peuvent sortir de ce'
   - '&7bloc - pluie de TNT, creepers chargés, enclumes,'
   - '&7explosions et le trou sans fond du vide.'
-  name: '&fBloc très malchanceux'
+  name: 'Bloc très malchanceux'
   stats:
   - '&7Chance : &c-80'
   type:
@@ -37,7 +37,7 @@ PANDORAS_BOX:
   description:
   - '&7Réservée aux événements les plus rares et chaotiques,'
   - '&7comme des nuées de Faucheurs et des golems de fer déchaînés.'
-  name: '&5Boîte de Pandore'
+  name: 'Boîte de Pandore'
   stats:
   - '&7Chance : &c&oERREUR'
   type:
@@ -45,6 +45,6 @@ PANDORAS_BOX:
   usage:
   - '&eCassez&7 pour déclencher une Surprise de Pandore aléatoire'
 _LUCKYBLOCKS_GROUP_ICON:
-  name: '&rBlocs de la chance'
+  name: 'Blocs de la chance'
   type:
   - '&7&oDivers'
